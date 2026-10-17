@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Picasso Academy | איליי ביתן</title>
+<meta name="description" content="אקדמיה לספרות גברים של איליי ביתן. לומדים לאבחן ראש, לחשוב לבד ולבנות כל תספורת מתוך הבנה. מסלולים למתחילים ולמתקדמים, קבוצות של עד 4 תלמידים.">
+<meta property="og:title" content="Picasso Academy | איליי ביתן">
+<meta property="og:description" content="תפסיק לנחש. תתחיל להבין. אקדמיה לספרות גברים.">
+<meta property="og:image" content="https://picassoacademy.com/media/graduates.jpg">
+<meta property="og:url" content="https://picassoacademy.com/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#09080c">
+<style>*{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700;900&family=Assistant:wght@400;600;700&family=Cormorant+Garamond:ital,wght@1,500&display=swap">
+<style>
+/* Layout: one narrow editorial column on deep black; full-width bands carry the Spectrum tone scale as the brand's signature. Single dark look by design. */
+:root{
+  --ink:#09080c; --ink2:#121019; --line:#26222f;
+  --fg:#efeaf5; --muted:#a49cb3;
+  --purple:#7c4dff; --purple-deep:#2a1a55; --gold:#cfa968;
+  --t1:#0d0d0f; --t2:#2a2a2e; --t3:#56565c; --t4:#9a9aa0; --t5:#ececee;
+  --display:"Frank Ruhl Libre",Georgia,serif; --body:"Assistant",system-ui,-apple-system,sans-serif; --latin:"Cormorant Garamond",Georgia,serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--fg);font-family:var(--body);font-size:17px;line-height:1.65;direction:rtl}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:1040px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.eyebrow{font-size:13px;letter-spacing:.18em;color:var(--gold);font-weight:700;text-transform:uppercase}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.08}
+h2{font-size:clamp(32px,6vw,52px);font-weight:900}
+h3{font-size:24px;font-weight:700}
+p{margin:0}
+.lead{font-size:clamp(18px,2.4vw,21px);color:var(--muted);max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--purple);color:#fff;text-decoration:none;font-weight:700;border:0;border-radius:4px;padding:15px 26px;font:inherit;font-weight:700;cursor:pointer;transition:background .2s}
+.btn:hover{background:#6a3cf0}
+.btn.line{background:transparent;border:1px solid var(--gold);color:var(--gold)}
+/* nav */
+nav.band{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--ink) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:11;background:var(--ink)}
+nav .inner{display:flex;align-items:center;justify-content:space-between;padding-block:14px;gap:16px}
+.logo{font-family:var(--latin);font-style:italic;font-size:26px;letter-spacing:.02em;text-decoration:none}
+.logo b{color:var(--gold);font-weight:500}
+nav .links{display:flex;gap:22px;font-size:15px}
+nav .links a{text-decoration:none;color:var(--muted)} nav .links a:hover{color:var(--fg)}
+nav .btn{padding:9px 16px;font-size:15px}
+@media (max-width:760px){nav .links{display:none}}
+/* hero */
+.hero .inner{padding-block:72px 56px;display:flex;flex-direction:column;gap:26px}
+.hero h1{font-size:clamp(46px,10vw,108px);font-weight:900;letter-spacing:-.01em}
+.hero h1 span{display:block;color:var(--purple)}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.spectrum{display:grid;grid-template-columns:repeat(5,1fr);height:64px;margin-top:18px;border-radius:2px;overflow:hidden}
+.spectrum div{position:relative}
+.spectrum div:nth-child(1){background:var(--t1);box-shadow:inset 0 0 0 1px var(--line)}
+.spectrum div:nth-child(2){background:var(--t2)} .spectrum div:nth-child(3){background:var(--t3)}
+.spectrum div:nth-child(4){background:var(--t4)} .spectrum div:nth-child(5){background:var(--t5)}
+.spectrum-labels{display:grid;grid-template-columns:repeat(5,1fr);font-family:var(--latin);font-style:italic;font-size:15px;color:var(--muted);margin-top:8px;direction:ltr}
+.spectrum-labels span{text-align:center}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div{padding:22px 16px;text-align:center;border-inline-start:1px solid var(--line)}
+.facts div:first-child{border-inline-start:0}
+.facts b{display:block;font-family:var(--display);font-size:clamp(30px,5vw,44px);color:var(--gold);font-weight:700;line-height:1.1}
+.facts span{font-size:14px;color:var(--muted)}
+@media (max-width:560px){.facts{grid-template-columns:1fr}.facts div{border-inline-start:0;border-top:1px solid var(--line)}.facts div:first-child{border-top:0}}
+section.band .inner{padding-block:84px;display:flex;flex-direction:column;gap:28px}
+/* story */
+.story .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+.story .text{display:flex;flex-direction:column;gap:18px;min-width:0}
+.video{aspect-ratio:9/12;max-width:100%;background:linear-gradient(160deg,var(--purple-deep),var(--ink2));border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--muted);font-size:14px;text-align:center;padding:20px}
+.video .play{width:64px;height:64px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center}
+.video .play::after{content:"";border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent var(--gold);margin-left:4px}
+.timeline{display:flex;flex-direction:column;border-inline-start:1px solid var(--gold);padding-inline-start:20px;gap:14px}
+.timeline div b{color:var(--gold);font-family:var(--display);margin-inline-end:8px}
+.storyvid{margin:0;display:flex;flex-direction:column;gap:8px;max-width:420px;justify-self:center;width:100%}
+.storyvid video{width:100%;aspect-ratio:9/16;object-fit:cover;background:var(--ink2);border:1px solid var(--line)}
+.storyvid figcaption{font-size:13px;color:var(--muted);text-align:center}
+@media (max-width:820px){.story .grid{grid-template-columns:1fr}}
+/* classroom */
+.classroom{background:var(--ink2)}
+.cgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:10px}
+.cgrid img,.cgrid video{width:100%;height:100%;object-fit:cover;display:block;background:var(--ink);min-width:0}
+.cgrid .big{grid-row:span 2}
+.cgrid .t{aspect-ratio:3/4}
+.wide{width:100%;max-width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+@media (max-width:760px){.cgrid{grid-template-columns:1fr 1fr}.cgrid .big{grid-column:span 2;grid-row:auto;aspect-ratio:3/4}}
+/* cta */
+.cta-card{background:var(--ink2);border:1px solid var(--purple);padding:30px 26px;display:flex;flex-direction:column;gap:18px;align-items:flex-start;min-width:0}
+.cta-steps{font-size:19px;color:var(--fg)}
+.cta-steps b{color:var(--gold)}
+/* students */
+.testi{display:grid;grid-template-columns:repeat(2,minmax(0,340px));gap:18px;justify-content:center}
+.testi figure,.grads{margin:0}
+.testi video{width:100%;aspect-ratio:9/16;object-fit:cover;background:var(--ink2);border:1px solid var(--line);display:block}
+.grads img{width:100%;max-width:100%;display:block;border:1px solid var(--line)}
+.grads figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+@media (max-width:560px){.testi{grid-template-columns:1fr;max-width:340px;margin:0 auto;width:100%}}
+/* cuts */
+.cuts{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.cuts img{width:100%;aspect-ratio:3/5;object-fit:cover;display:block}
+@media (max-width:900px){.cuts{grid-template-columns:repeat(3,1fr)}}
+/* method */
+.method{background:var(--ink2)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.steps article{background:var(--ink2);padding:30px 26px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.steps .n{font-family:var(--latin);font-style:italic;font-size:44px;color:var(--purple);line-height:1}
+.steps p{color:var(--muted)}
+.quote{font-family:var(--display);font-size:clamp(22px,3.4vw,30px);color:var(--fg);border-inline-start:3px solid var(--gold);padding-inline-start:20px;max-width:34ch}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+/* spectrum */
+.spec .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.spec .cols div{display:flex;flex-direction:column;gap:8px;min-width:0}
+.spec .cols b{font-family:var(--display);font-size:22px}
+.spec .cols p{color:var(--muted)}
+.spec .rule{font-family:var(--display);font-size:clamp(24px,4vw,36px);text-align:center;padding:26px 16px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.spec .rule em{font-style:normal;color:var(--gold)}
+@media (max-width:760px){.spec .cols{grid-template-columns:1fr}}
+/* why */
+.whygrid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.whygrid div{display:flex;flex-direction:column;gap:8px;min-width:0;border-top:1px solid var(--gold);padding-top:16px}
+.whygrid b{font-family:var(--display);font-size:21px}
+.whygrid p{color:var(--muted);font-size:16px}
+@media (max-width:900px){.whygrid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.whygrid{grid-template-columns:1fr}}
+/* tracks */
+.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.track{border:1px solid var(--line);padding:30px 26px;display:flex;flex-direction:column;gap:14px;min-width:0;background:var(--ink)}
+.track.feature{border-color:var(--purple);background:linear-gradient(180deg,var(--purple-deep),var(--ink) 70%)}
+.track .tag{font-size:13px;color:var(--gold);font-weight:700;letter-spacing:.08em}
+.track ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;color:var(--muted);font-size:16px}
+.track li::before{content:"—";color:var(--gold);margin-inline-end:8px}
+.track .who{font-size:15px;color:var(--fg);border-top:1px solid var(--line);padding-top:14px;margin-top:auto}
+@media (max-width:900px){.tracks{grid-template-columns:1fr}}
+/* faq */
+.faq{background:var(--ink2)}
+details{border-bottom:1px solid var(--line);padding-block:18px}
+summary{cursor:pointer;font-family:var(--display);font-size:21px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--gold);font-family:var(--body)}
+details[open] summary::after{content:"–"}
+details p{color:var(--muted);margin-top:10px;max-width:65ch}
+/* contact */
+.contact .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--ink2);border:1px solid var(--line);padding:26px}
+form label{display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--muted);min-width:0}
+form .full{grid-column:1/-1}
+.consent span{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+.consent input{width:18px;height:18px;margin-top:3px;flex:none;accent-color:var(--purple)}
+input,select,textarea{font:inherit;color:var(--fg);background:var(--ink);border:1px solid var(--line);border-radius:3px;padding:12px;width:100%}
+textarea{min-height:96px;resize:vertical}
+.formnote{font-size:13px;color:var(--muted)}
+.done{grid-column:1/-1;background:var(--purple-deep);border:1px solid var(--purple);padding:16px;font-size:15px}
+.done code{display:block;white-space:pre-wrap;font-family:var(--body);background:var(--ink);padding:10px;margin-top:8px;font-size:14px;user-select:all}
+@media (max-width:820px){.contact .grid{grid-template-columns:1fr}}
+@media (max-width:480px){form{grid-template-columns:1fr}}
+footer.band .inner{padding-block:30px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:no-preference){
+  .spectrum div{transform-origin:right;animation:tone .9s cubic-bezier(.2,.7,.2,1) both}
+  .spectrum div:nth-child(2){animation-delay:.08s}.spectrum div:nth-child(3){animation-delay:.16s}.spectrum div:nth-child(4){animation-delay:.24s}.spectrum div:nth-child(5){animation-delay:.32s}
+  @keyframes tone{from{transform:scaleX(.2)}}
+}
+.tagline{font-family:var(--display);font-size:clamp(20px,3vw,26px);color:var(--gold);display:flex;flex-direction:column;gap:2px}
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.notes blockquote{margin:0;background:var(--ink2);border:1px solid var(--line);border-inline-start:3px solid var(--purple);padding:20px 20px 16px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.notes p{font-size:17px;color:var(--fg)}
+.notes cite{font-style:normal;font-size:13px;color:var(--gold)}
+@media (max-width:900px){.notes{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.notes{grid-template-columns:1fr}}
+.btn.wa{background:#1fa855}.btn.wa:hover{background:#178f47}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap}
+.dock{display:none}
+@media (max-width:760px){
+  .dock{display:flex;gap:8px;position:fixed;inset:auto 0 0;z-index:20;padding:10px max(12px,env(safe-area-inset-left,0px)) calc(10px + env(safe-area-inset-bottom,0px));background:color-mix(in srgb,var(--ink) 92%,transparent);backdrop-filter:blur(10px);border-top:1px solid var(--line);transition:transform .25s}
+  .dock .btn{flex:1;justify-content:center;padding:13px 10px}
+  .dock.hide{transform:translateY(110%)}
+  body{padding-bottom:84px}
+}
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fit div{border:1px solid var(--line);padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.fit .yes{border-color:var(--purple)}
+.fit ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;color:var(--muted)}
+.fit .yes li::before{content:"✓";color:var(--gold);margin-inline-end:10px}
+.fit .no li::before{content:"✕";color:var(--muted);margin-inline-end:10px}
+@media (max-width:760px){.fit{grid-template-columns:1fr}}
+</style>
+
+<nav class="band"><div class="inner">
+  <a class="logo" href="#top">Picasso <b>Academy</b></a>
+  <div class="links"><a href="#story">הסיפור</a><a href="#method">השיטה</a><a href="#spectrum">Spectrum</a><a href="#classroom">בכיתה</a><a href="#students">תלמידים</a><a href="#tracks">מסלולים</a><a href="#faq">שאלות</a></div>
+  <a class="btn" href="#contact">לשיחת אפיון</a>
+</div></nav>
+
+<header class="band hero" id="top"><div class="inner">
+  <p class="eyebrow">אקדמיה לספרות גברים · איליי ביתן</p>
+  <h1>תפסיק לנחש.<span>תתחיל להבין.</span></h1>
+  <p class="tagline"><span>מלמד ספרים להבין, לא להעתיק.</span><span>מאפס לספר, או מספר לסמכות.</span></p>
+  <p class="lead">רוב הספרים לומדים להעתיק תספורות. ב-Picasso Academy לומדים לאבחן ראש, לחשוב לבד ולבנות כל תספורת מתוך הבנה. ובסוף גם לבנות קריירה שמחזיקה.</p>
+  <div class="actions"><a class="btn" href="#contact">קבע שיחת אפיון</a><a class="btn line" href="#tracks">למסלולים</a></div>
+  <div>
+    <div class="spectrum" aria-label="סולם הגוונים של שיטת Spectrum"><div></div><div></div><div></div><div></div><div></div></div>
+    <div class="spectrum-labels" aria-hidden="true"><span>White</span><span>Light Gray</span><span>Dark Gray</span><span>Light Black</span><span>Dark Black</span></div>
+  </div>
+</div></header>
+
+<div class="band"><div class="inner facts">
+  <div><b>+150</b><span>תלמידים ומשתתפי סדנאות</span></div>
+  <div><b>עד 4</b><span>תלמידים בקבוצה</span></div>
+  <div><b>London</b><span>הוכשר אצל Josh O.P</span></div>
+</div></div>
+
+<section class="band story" id="story"><div class="inner">
+  <div class="grid">
+    <div class="text">
+      <p class="eyebrow">הסיפור</p>
+      <h2>התחלתי לספר בגיל 13. אף אחד לא נתן לי את זה מוכן.</h2>
+      <p class="lead">קורס הספרות הראשון שלי בוטל, אז התחלתי לספר לבד, בפנימייה. בגיל 16 פתחתי מספרה משלי. מאז למדתי בארץ ובחו"ל, כולל בלונדון אצל Josh O.P, ובניתי שיטה שמחברת בין הגישות הכי חזקות שיש בתחום. היום אני גם מנטור בדור העתיד.</p>
+      <p class="quote">"אני לא רוצה שתהיה העתק שלי. אני רוצה שתבין, תבנה שיטה ותתקדם מנקודת הפתיחה שלך."</p>
+      <div class="timeline">
+        <div><b>13</b>מתחיל לספר בפנימייה</div>
+        <div><b>16</b>פותח מספרה משלו</div>
+        <div><b>London</b>מתמקצע אצל Josh O.P</div>
+        <div><b>היום</b>מלמד ספרים ובונה את Picasso Academy</div>
+      </div>
+    </div>
+    <figure class="storyvid"><video controls playsinline preload="metadata" poster="media/story-poster.jpg" src="media/story.mp4" aria-label="הסרטון האישי של איליי"></video><figcaption>הסרטון שלי · עם סאונד</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="band method" id="method"><div class="inner">
+  <p class="eyebrow">השיטה</p>
+  <h2>שלושה שלבים. באותו סדר, תמיד.</h2>
+  <div class="steps">
+    <article><span class="n">i</span><h3>קודם מבינים</h3><p>מבנה הראש, נקודות ייחוס אנטומיות, צפיפות וכיווני צמיחה. תספורת היא משקל, תנועה וצורה, ולפני שמתחילים לחתוך צריך לראות את שלושתם.</p></article>
+    <article><span class="n">ii</span><h3>אחר כך בונים</h3><p>חלוקה, אלבציה, זוויות חיתוך וחיבורים. עובדים לפי מערכת קבועה ובודקים כל תספורת מחמש זוויות: למעלה, צדדים, אחור, פרופיל והיקף.</p></article>
+    <article><span class="n">iii</span><h3>ורק בסוף מחברים</h3><p>מתאימים את הצורה לפנים ולאדם שיושב בכיסא. ככה כל תספורת יוצאת מאבחון, ואף אחת לא יוצאת מהעתקה.</p></article>
+  </div>
+  <p class="quote">"אם אתה לא מבין, אל תבנה. אם לא בנית, אל תחבר."</p>
+</div></section>
+
+<section class="band spec" id="spectrum"><div class="inner">
+  <p class="eyebrow">Spectrum Fade</p>
+  <h2>פייד בגוונים, לא במספרי מסרק.</h2>
+  <p class="lead">Spectrum היא השיטה שפיתחתי לבניית פייד. אורך, צפיפות וחשיפת הקרקפת יוצרים גוון שהעין קולטת, ואת הגוון הזה אנחנו בונים, שכבה אחרי שכבה, מ-Dark Black ועד White.</p>
+  <div class="cols">
+    <div><b>צבע</b><p>חמישה גוונים מוגדרים. כל אזור בראש מקבל גוון, ולא מספר מסרק.</p></div>
+    <div><b>סימטריה</b><p>קווים מנחים ופסי עבודה לכל צד, כדי ששני הצדדים ייצאו זהים בכל פעם.</p></div>
+    <div><b>הצללה</b><p>צל, מסגור שחור וקונטרסט. השכבה שהופכת פייד נקי לפייד שעוצר מבט.</p></div>
+  </div>
+  <p class="rule"><em>לבן</em> לא מכיל אפור. <em>אפור</em> לא מכיל שחור.</p>
+  <div class="cuts">
+    <img src="media/cut-1.jpg" alt="פייד נמוך עם טופ מסולסל" loading="lazy">
+    <img src="media/cut-3.jpg" alt="פייד עם קו וקרופ קצר" loading="lazy">
+    <img src="media/cut-2.jpg" alt="מאלט עם פייד וקו" loading="lazy">
+    <img src="media/cut-7.jpg" alt="פייד נמוך עם טופ מסורק לאחור" loading="lazy">
+    <img src="media/cut-4.jpg" alt="פייד עם קו ונפח בטופ" loading="lazy">
+    <img src="media/cut-6.jpg" alt="פייד קצר עם קו" loading="lazy">
+  </div>
+</div></section>
+
+<section class="band classroom" id="classroom"><div class="inner">
+  <p class="eyebrow">בכיתה</p>
+  <h2>לומדים ליד הכיסא.</h2>
+  <p class="lead">הדגמה, תרגול ותיקון בזמן אמת. ככה נראים השיעורים, הסדנאות וימי הסיום עם התעודות.</p>
+  <div class="cgrid">
+    <img class="big" src="media/group-1.jpg" alt="איליי עם תלמידים שמחזיקים תעודות סיום" loading="lazy">
+    <img class="t" src="media/teach-1.webp" alt="הדגמה ליד הכיסא" loading="lazy">
+    <img class="t" src="media/workshop.webp" alt="סדנה מול קהל" loading="lazy">
+    <img class="t" src="media/teach-2.webp" alt="תרגול עם תלמידים" loading="lazy">
+    <img class="t" src="media/cut-5.jpg" alt="פייד עם קו, מבט מהצד" loading="lazy">
+  </div>
+  <img class="wide" src="media/crowd.webp" alt="משתתפי סדנה של Picasso Academy" loading="lazy">
+</div></section>
+
+<section class="band" id="students"><div class="inner">
+  <p class="eyebrow">תלמידים מספרים</p>
+  <h2>במילים שלהם.</h2>
+  <div class="testi">
+    <figure><video controls playsinline preload="metadata" poster="media/testimonial-1.jpg" src="media/testimonial-1.mp4" aria-label="תלמיד מספר על הלימודים באקדמיה"></video></figure>
+    <figure><video controls playsinline preload="metadata" poster="media/testimonial-2.jpg" src="media/testimonial-2.mp4" aria-label="תלמיד מספר על הלימודים באקדמיה"></video></figure>
+  </div>
+  <p class="lead">מה שתלמידים כתבו לי, מתוך הודעות אמיתיות, מילה במילה.</p>
+  <div class="notes">
+    <blockquote><p>״השיטה הזאת הצילה אותי״</p><cite>תלמיד השתלמות, על Spectrum</cite></blockquote>
+    <blockquote><p>״גם הכל עם המספריים שלימדת בהשתלמות עזר לי בטירוף. לפני זה לא הבנתי מה אני עושה, ועכשיו אני מקצוען קצה״</p><cite>תלמיד השתלמות</cite></blockquote>
+    <blockquote><p>״פתאום אני מתחיל לקלוט דברים בבום שלפני לא קלטתי, וזה רק מיום אחד. מטורף אחי״</p><cite>משתתף ביום השתלמות</cite></blockquote>
+    <blockquote><p>״איך אני מחכה כבר ללמוד אותך עוד פעם. איך שיפרת אותי בהכל, אתה אפילו לא מבין״</p><cite>תלמיד</cite></blockquote>
+    <blockquote><p>״איזה כיף שאתה מעלה תוצאה שלי עם השיטה שלך. מתגאה להיות חלק מהאנשים שלמדו אותה״</p><cite>תלמיד</cite></blockquote>
+    <blockquote><p>״תודה רבה, הסרטונים שלך עוזרים לי מאוד״</p><cite>מתוך הודעה באינסטגרם</cite></blockquote>
+  </div>
+  <figure class="grads"><img src="media/graduates.jpg" alt="איליי עם עשרות בוגרים שמחזיקים תעודות סיום של Picasso Academy" loading="lazy"><figcaption>יום סיום של Picasso Academy</figcaption></figure>
+</div></section>
+
+<section class="band why"><div class="inner">
+  <p class="eyebrow">למה Picasso</p>
+  <h2>מה שונה כאן מקורס רגיל.</h2>
+  <div class="whygrid">
+    <div><b>מבינים, לא מעתיקים</b><p>כל החלטה נשענת על הלקוח, על השיער ועל מבנה הראש. לא על תספורת שראית ברשת.</p></div>
+    <div><b>שיטת Spectrum</b><p>שיטת פייד מקורית שבנויה על גוונים, ולא על מספרי מכונה.</p></div>
+    <div><b>מקצוע ועסק ביחד</b><p>לומדים גם תוכן, שיווק, מכירה וניהול, כדי שהכיסא שלך יתמלא.</p></div>
+    <div><b>עד 4 תלמידים</b><p>אבחון אישי, פידבק בזמן אמת, ומקום לשאול ולתקן טעויות.</p></div>
+  </div>
+</div></section>
+
+<section class="band" id="fit"><div class="inner">
+  <p class="eyebrow">לפני שפונים</p>
+  <h2>זה לא מתאים לכולם.</h2>
+  <div class="fit">
+    <div class="yes"><h3>מתאים לך אם</h3><ul>
+      <li>אתה רוצה להבין למה תספורת עובדת, ולא רק איך היא נראית</li>
+      <li>אתה מוכן לתרגל, לטעות ולתקן</li>
+      <li>אתה רוצה לבנות מזה קריירה, ולא רק לדעת לספר</li>
+    </ul></div>
+    <div class="no"><h3>לא מתאים לך אם</h3><ul>
+      <li>אתה מחפש קיצור דרך בלי תרגול</li>
+      <li>אתה רוצה רק להעתיק תספורות מהרשת</li>
+      <li>אתה מחפש תעודה, ולא שינוי בעבודה שלך</li>
+    </ul></div>
+  </div>
+</div></section>
+
+<section class="band" id="tracks"><div class="inner">
+  <p class="eyebrow">מסלולים</p>
+  <h2>מאיפה שאתה נמצא היום.</h2>
+  <div class="tracks">
+    <article class="track">
+      <span class="tag">למתחילים</span><h3>Foundations</h3>
+      <ul><li>מבנה הראש ונקודות ייחוס</li><li>משקל, תנועה וצורה</li><li>בסיס Spectrum Fade</li><li>אבחון לקוח ב-7 שלבים</li></ul>
+      <p class="who">למי שמתחיל מאפס, או מספר כבר אבל עדיין מנחש.</p>
+    </article>
+    <article class="track feature">
+      <span class="tag">למתקדמים</span><h3>Picasso Legacy</h3>
+      <ul><li>DFS Formula מול Vidal Sassoon, ואיך לשלב ביניהן</li><li>צורות פנים והתאמת תספורת</li><li>חיתוך מתקדם</li><li>חשיבה עסקית ומיתוג אישי</li></ul>
+      <p class="who">לספרים עובדים שרוצים להפוך לסמכות בתחום.</p>
+    </article>
+    <article class="track">
+      <span class="tag">אישי</span><h3>ליווי מקצועי</h3>
+      <ul><li>מפגש ראשון של אבחון ותוכנית אישית</li><li>עבודה על מה שעוצר אותך</li><li>מקצוע, שיווק ומכירה</li></ul>
+      <p class="who">למי שרוצה תוכנית שבנויה רק בשבילו.</p>
+    </article>
+  </div>
+  <p class="formnote">יש מחזורי בוקר ומחזורי ערב. אפשר לשלם בעד 12 תשלומים.</p>
+</div></section>
+
+<section class="band faq" id="faq"><div class="inner">
+  <p class="eyebrow">שאלות</p>
+  <h2>מה שכולם שואלים לפני.</h2>
+  <div>
+    <details><summary>אני מתחיל מאפס. זה מתאים לי?</summary><p>כן. מסלול Foundations בנוי בדיוק בשבילך, ומתחילים בו מההבנה עצמה, עוד לפני הטכניקה.</p></details>
+    <details><summary>אני כבר ספר. מה אני אלמד פה שעוד לא ראיתי?</summary><p>שיטת חשיבה. ב-Picasso Legacy אתה לומד לאבחן ולבנות כל תספורת מתוך עקרונות, בלי להסתמך על מספרי מסרק או על תספורות שראית ברשת.</p></details>
+    <details><summary>מה ההבדל בין המסלולים?</summary><p>Foundations בונה בסיס מאפס: אבחון, משקל, תנועה וצורה, ובסיס Spectrum. Picasso Legacy מיועד לספרים עובדים, ומשלב חיתוך מתקדם עם חשיבה עסקית. הליווי האישי נבנה סביבך, ומתחיל במפגש של אבחון ותוכנית אישית. בשיחת האפיון נגיד לך איזה מהם מתאים לך.</p></details>
+    <details><summary>כמה תלמידים יש בקבוצה?</summary><p>עד ארבעה, כדי שכל אחד יקבל תשומת לב אישית על הכיסא.</p></details>
+    <details><summary>מה זו שיחת אפיון?</summary><p>שיחה קצרה שבה מבינים איפה אתה עומד, מה אתה רוצה להשיג ואיזה מסלול מתאים לך. זו לא שיחת מכירה.</p></details>
+    <details><summary>אפשר לשלם בתשלומים?</summary><p>כן, עד 12 תשלומים.</p></details>
+    <details><summary>איפה לומדים, מתי נפתח מחזור וכמה זה עולה?</summary><p>יש מחזורי בוקר ומחזורי ערב, בקבוצות של עד 4 תלמידים. את המיקום, את תאריך המחזור הקרוב ואת המחיר של המסלול שמתאים לך תקבל בשיחת האפיון.</p></details>
+    <details><summary>השארת פרטים מחייבת אותי להירשם?</summary><p>לא. השארת פרטים היא רק בקשה לשיחה. אתה מחליט אם להמשיך רק אחרי שהבנת מה מתאים לך.</p></details>
+  </div>
+</div></section>
+
+<section class="band contact" id="contact"><div class="inner">
+  <div class="grid">
+    <div style="display:flex;flex-direction:column;gap:18px;min-width:0">
+      <p class="eyebrow">שיחת אפיון</p>
+      <h2>בוא נבין איפה אתה עומד.</h2>
+      <p class="lead">השאר פרטים ונחזור אליך לשיחה קצרה. בסוף השיחה תדע איזה מסלול מתאים לך, או שתדע שזה לא בשבילך כרגע. גם זו תשובה.</p>
+    </div>
+    <div class="cta-card">
+      <p class="cta-steps"><b>שם, טלפון ומסלול.</b> פחות מדקה, ונחזור אליך לשיחת אפיון קצרה.</p>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdPz1AJ8mGYg_maw2jA1zoFIRlp6AFjssHg1I3B89BwTkSFpA/viewform" target="_blank" rel="noopener">השאר פרטים לשיחת אפיון ↗</a>
+      <p class="formnote">הטופס נפתח בחלון חדש. השארת פרטים היא לא הרשמה ולא מחייבת אותך בכלום.</p>
+      <p class="formnote">מעדיף לדבר ישר?</p>
+      <a class="btn wa" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20Picasso%20Academy" target="_blank" rel="noopener">שלח הודעה בוואטסאפ ↗</a>
+    </div>
+  </div>
+</div></section>
+
+<footer class="band"><div class="inner">
+  <span>Picasso Academy · איליי ביתן</span>
+  <span class="cta-row"><a href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20Picasso%20Academy" target="_blank" rel="noopener">WhatsApp · 054-209-4188</a><a href="https://instagram.com/ilay.bitan_" target="_blank" rel="noopener">Instagram · @ilay.bitan_</a></span>
+</div></footer>
+
+
+
+<div class="dock" id="dock"><a class="btn" href="#contact">לשיחת אפיון</a><a class="btn wa" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20Picasso%20Academy" target="_blank" rel="noopener">וואטסאפ</a></div>
+<script>
+(function(){var d=document.getElementById('dock'),c=document.getElementById('contact');if(!d||!c||!('IntersectionObserver' in window))return;
+new IntersectionObserver(function(es){es.forEach(function(e){d.classList.toggle('hide',e.isIntersecting);});}).observe(c);})();
+</script>
+</body>
+</html>
