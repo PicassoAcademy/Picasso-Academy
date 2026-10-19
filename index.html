@@ -309,6 +309,15 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .gallery .big{grid-column:1/-1;aspect-ratio:4/3}
 @media (min-width:900px){.gallery{grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr)}.gallery .big{grid-column:auto;aspect-ratio:auto}}
 
+
+/* classroom wall: clips and photos */
+.wall{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:60px;grid-auto-flow:dense}
+.wall > *{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:12px;background:var(--card);border:1px solid var(--rule);min-width:0}
+.wall > .w{grid-column:span 2;aspect-ratio:16/9}
+.cohorts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.cohorts img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;border:1px solid var(--rule)}
+@media (min-width:900px){.wall{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(190px,18vw,236px);gap:14px}.wall > *{aspect-ratio:auto;height:100%;grid-row:span 2}.wall > .w{grid-row:span 1}.wall > .big{grid-row:span 2}.cohorts{max-width:760px}}
+
 /* education day band */
 .grad{position:relative;isolation:isolate;overflow:hidden}
 .grad-photo{position:relative;z-index:-2;aspect-ratio:4/3;max-width:100%;overflow:hidden}
@@ -828,10 +837,18 @@ html.has-cur,html.has-cur *{cursor:none!important}
       <p class="lead">הדגמה, תרגול ותיקון בזמן אמת. ככה נראים השיעורים והסדנאות.</p>
       <a class="link" href="https://instagram.com/ilay.bitan_" target="_blank" rel="noopener"><span lang="en">View more on Instagram</span> <span>←</span></a>
     </div>
-    <div class="gallery">
-      <video class="big loop" muted loop playsinline preload="none" poster="media/crowd.jpg" aria-label="משתתפי סדנה של Picasso Academy"><source src="media/crowd.mp4" type="video/mp4"></video>
-      <video class="loop" muted loop playsinline preload="none" poster="media/teach-1.jpg" aria-label="הדגמה ליד הכיסא"><source src="media/teach-1.mp4" type="video/mp4"></video>
-      <img src="media/cut-5-sm.jpg" width="600" height="1067" alt="פייד עם קו, מבט מהצד" loading="lazy">
+    <div class="wall">
+      <video class="loop w big" muted loop playsinline preload="none" poster="media/wall-7.jpg" aria-label="איליי מסביר לקבוצה ליד הכיסא"><source src="media/wall-7.mp4" type="video/mp4"></video>
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-1.jpg" aria-label="איליי מדגים על לקוח מול קהל"><source src="media/wall-1.mp4" type="video/mp4"></video>
+      <img src="media/class-demo.jpg" width="608" height="1080" alt="איליי מדגים חיתוך מול התלמידים" loading="lazy">
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-2.jpg" aria-label="הדגמה ליד הכיסא"><source src="media/wall-2.mp4" type="video/mp4"></video>
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-4.jpg" aria-label="איליי עובד עם תלמיד על התספורת"><source src="media/wall-4.mp4" type="video/mp4"></video>
+      <img src="media/stage-demo.jpg" width="1050" height="1400" alt="איליי מדגים חיתוך באירוע" loading="lazy">
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-3.jpg" aria-label="הדגמה עם פן"><source src="media/wall-3.mp4" type="video/mp4"></video>
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-5.jpg" aria-label="איליי מסביר לתלמיד"><source src="media/wall-5.mp4" type="video/mp4"></video>
+      <img class="w" src="media/class-audience.jpg" width="1100" height="733" alt="משתתפים מצלמים את ההדגמה" loading="lazy">
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-6.jpg" aria-label="הדגמה מול עשרות משתתפים"><source src="media/wall-6.mp4" type="video/mp4"></video>
+      <video class="loop w" muted loop playsinline preload="none" poster="media/wall-8.jpg" aria-label="קבוצה סביב הכיסא"><source src="media/wall-8.mp4" type="video/mp4"></video>
     </div>
   </div>
 </section>
@@ -842,6 +859,10 @@ html.has-cur,html.has-cur *{cursor:none!important}
     <p class="tag" lang="en">Education Day</p>
     <h2>יום השתלמות.<span class="chr">ותעודה ביד.</span></h2>
     <p>ככה נראה יום השתלמות של Picasso Academy בנושא תספורות ופיידים: עשרות משתתפים, וכל אחד יוצא עם תעודה.</p>
+    <div class="cohorts">
+      <img src="media/cohort-group.jpg" width="788" height="1400" alt="מחזור של Picasso Academy עם התעודות" loading="lazy">
+      <img src="media/cohort-small.jpg" width="1050" height="1400" alt="בוגר מחזיק תעודה עם הצוות" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -1180,7 +1201,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
   safe(function(){
     if(!fx)return;
     var sets=[['.head .tag,.head .lead,.head .link,.about-text .tag,.cards4 .mini,.pillars > div,.prog-meta,.prog h3,.prog ul,.prog .who,.facts-row,.prog .link,.checks li,.why-text .pill,.why-text .btn,.qa details,.contact-logo,.contact .lead,.form-card,.contact .fine,.voices video,.grad .wrap > p,.latin-line,.rule-line,.film,.after-prog > .btn,.quiz,.blend,.stats dl > div','rv'],
-              ['.poster,.banner,.step,.why-photo,.gallery > *,.tones','rv-fold']];
+              ['.poster,.banner,.step,.why-photo,.wall > *,.cohorts img,.tones','rv-fold']];
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target,i=+el.style.getPropertyValue('--i')||0;
       el.classList.add('in');setTimeout(function(){el.classList.remove('rv','rv-fold','in');el.style.removeProperty('--i');},1500+i*110);});},{rootMargin:'0px 0px -8% 0px'});
     sets.forEach(function(s){$$(s[0]).forEach(function(el){
