@@ -575,6 +575,12 @@ html.has-cur,html.has-cur *{cursor:none!important}
 
 
 /* ===== Project 97 ===== */
+.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.p97-pill.acad{border-color:rgba(157,123,255,.5);background:rgba(123,77,255,.12)}
+.p97-pill.acad:hover{border-color:var(--violet-hi);background:rgba(123,77,255,.2)}
+.p97-pill.acad i{background:var(--violet-hi);animation-delay:1s}
+.p97-pill.acad b{background:linear-gradient(135deg,#6a3cff,var(--violet-hi));color:#fff}
+
 .nav-97{color:var(--gold-hi)!important}
 .p97-pill{align-self:center;display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:0 8px 0 18px;padding-inline:18px 6px;border:1px solid rgba(214,177,106,.45);border-radius:99px;background:rgba(214,177,106,.08);color:var(--bone);font-size:15px;font-weight:600;letter-spacing:.04em;text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:border-color .3s,background .3s}
 .p97-pill:hover{border-color:var(--gold-hi);background:rgba(214,177,106,.14)}
@@ -671,6 +677,8 @@ html.bar-on .fab{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
 @media (prefers-reduced-motion:no-preference){
   .p97-pill i{animation:ping 2s ease-out infinite}
   @keyframes ping{0%{box-shadow:0 0 0 0 rgba(244,220,166,.7)}80%,100%{box-shadow:0 0 0 12px rgba(244,220,166,0)}}
+  .p97-pill.acad i{animation-name:pingv}
+  @keyframes pingv{0%{box-shadow:0 0 0 0 rgba(157,123,255,.8)}80%,100%{box-shadow:0 0 0 12px rgba(157,123,255,0)}}
   .p97-ghost{animation:sheen 7s ease-in-out infinite}
   @keyframes sheen{0%,100%{background-position:120% 0}50%{background-position:-20% 0}}
   .t-name b{animation:foil 5s ease-in-out infinite}
@@ -721,7 +729,7 @@ html.bar-on .fab{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
       </div>
     </div>
     <div class="hero-copy">
-      <a class="p97-pill" href="#p97"><i aria-hidden="true"></i><span>פרויקט 97 · 22.11 · תל אביב</span><b id="p97PillDays">₪97</b></a>
+      <div class="pills"><a class="p97-pill" href="#p97"><i aria-hidden="true"></i><span>פרויקט 97 · 22.11 · תל אביב</span><b id="p97PillDays">₪97</b></a><a class="p97-pill acad" href="#programs"><i aria-hidden="true"></i><span>מסלולי האקדמיה</span><b>עד 12 תשלומים</b></a></div>
       <h1><span>תפסיק לנחש.</span><span class="chr">תתחיל להבין.</span></h1>
       <p class="academy-line" lang="en">Men's Barbering Academy</p>
       <p class="lead">מלמד ספרים להבין, לא להעתיק. מאפס לספר, או מספר לסמכות.</p>
