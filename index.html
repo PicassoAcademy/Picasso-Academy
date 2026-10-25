@@ -572,6 +572,26 @@ h2.slice.cut::after{animation:seam 1s cubic-bezier(.6,0,.2,1) .4s both}
 html.has-cur,html.has-cur *{cursor:none!important}
 
 @media (prefers-reduced-motion:reduce){.beam::before{animation:none}.prog-n,.step::before,.banner{transition:none}.qa details::details-content{transition:none}}
+
+/* Project 97 event */
+.p97{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--rule);background:radial-gradient(70% 50% at 85% 10%,rgba(214,177,106,.14),transparent 70%),radial-gradient(70% 60% at 10% 90%,rgba(123,77,255,.28),transparent 70%),linear-gradient(to bottom,#0a0618,var(--void))}
+.p97-num{position:absolute;z-index:-1;inset-inline-start:-2vw;top:4%;font-family:var(--cond);font-size:clamp(260px,62vw,560px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(214,177,106,.16);pointer-events:none;user-select:none}
+.p97 .wrap{display:grid;gap:44px}
+.p97 h2 .gold{display:block;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p97-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.p97-facts div{display:flex;flex-direction:column;gap:8px;padding:22px 20px;background:#0c0817;min-width:0}
+.p97-facts small{font-size:13px;letter-spacing:.24em;color:var(--ash)}
+.p97-facts b{font-family:var(--heb);font-weight:700;font-size:34px;line-height:1;color:var(--bone)}
+.p97-facts b.num{font-family:var(--cond);font-weight:400;font-size:46px;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p97-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;color:#ddd7e8;font-size:18px}
+.p97-list li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;align-items:baseline}
+.p97-list li::before{content:"✓";color:var(--gold);font-weight:700}
+.p97-motto{font-family:var(--mark);font-style:italic;font-size:clamp(24px,4.4vw,32px);line-height:1.3;color:var(--lilac);border-inline-start:2px solid var(--gold);padding-inline-start:18px}
+.p97 .form-card{width:100%;max-width:560px}
+.p97 .pay-row{display:flex;flex-wrap:wrap;gap:8px}
+.p97 .pay-row span{font-size:13px;letter-spacing:.12em;color:var(--ash);border:1px solid var(--rule);border-radius:99px;padding:6px 12px}
+.p97-bar{display:none}
+@media (min-width:960px){.p97 .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:start;gap:72px}.p97-facts{grid-template-columns:repeat(4,minmax(0,1fr))}.p97 .side{position:sticky;top:110px;display:flex;flex-direction:column;gap:28px}}
 </style>
 </head>
 <body>
@@ -585,7 +605,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 <header class="nav">
   <div class="wrap">
     <a class="nav-logo" href="#top"><img src="media/logo-gold-sm.webp" width="340" height="186" alt="Picasso Academy, איליי ביתן"></a>
-    <nav class="links" aria-label="ניווט באתר"><a href="#about">איליי</a><a href="#method">השיטה</a><a href="#spectrum">Spectrum</a><a href="#programs">מסלולים</a><a href="#students">תלמידים</a><a href="#faq">שאלות</a></nav>
+    <nav class="links" aria-label="ניווט באתר"><a href="#p97">פרויקט 97</a><a href="#about">איליי</a><a href="#method">השיטה</a><a href="#spectrum">Spectrum</a><a href="#programs">מסלולים</a><a href="#students">תלמידים</a><a href="#faq">שאלות</a></nav>
     <a class="btn nav-cta" href="#contact">לשיחת אפיון</a>
     <button class="menu" id="menuBtn" aria-label="תפריט" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
   </div>
@@ -593,7 +613,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 <div class="drawer" id="drawer" hidden>
   <button class="menu close" id="menuClose" aria-label="סגור תפריט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
   <img src="media/logo-gold-sm.webp" width="340" height="186" alt="">
-  <a href="#about">איליי</a><a href="#method">השיטה</a><a href="#spectrum">Spectrum</a><a href="#programs">מסלולים</a><a href="#students">תלמידים</a><a href="#faq">שאלות</a><a href="#contact">צור קשר</a>
+  <a href="#p97">פרויקט 97</a><a href="#about">איליי</a><a href="#method">השיטה</a><a href="#spectrum">Spectrum</a><a href="#programs">מסלולים</a><a href="#students">תלמידים</a><a href="#faq">שאלות</a><a href="#contact">צור קשר</a>
 </div>
 
 <main>
@@ -617,7 +637,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
       <p class="lead">מלמד ספרים להבין, לא להעתיק. מאפס לספר, או מספר לסמכות.</p>
       <div class="hero-actions">
         <a class="btn" href="#contact">קבע שיחת אפיון <span class="ar">←</span></a>
-        <a class="btn gold" href="#programs">גלה את המסלולים</a>
+        <a class="btn gold" href="#p97">פרויקט 97 · 22.11</a>
       </div>
     </div>
   </div>
@@ -630,6 +650,40 @@ html.has-cur,html.has-cur *{cursor:none!important}
     <div><dt>12</dt><dd>תשלומים לבחירה</dd></div>
     <div><dt lang="en">LONDON</dt><dd>הוכשר אצל <span class="nw">Josh O.P</span></dd></div>
   </dl>
+</section>
+
+<section class="sec p97" id="p97" aria-label="פרויקט 97">
+  <span class="p97-num" aria-hidden="true">97</span>
+  <div class="wrap">
+    <div class="head">
+      <p class="tag" lang="en">Project 97 · Live Event</p>
+      <h2>פרויקט 97.<span class="gold">יום אחד שמשנה כיוון.</span></h2>
+      <p class="lead">סדנה חיה בתל אביב לספרים צעירים, במחיר שכל אחד יכול לעמוד בו. מקצוע, עסק ושיווק, עם איליי ביתן ונועם דרעי, ביום אחד.</p>
+      <div class="p97-facts">
+        <div><small>תאריך</small><b>22.11</b></div>
+        <div><small>יום</small><b>ראשון</b></div>
+        <div><small>מיקום</small><b>תל אביב</b></div>
+        <div><small>כרטיס</small><b class="num">₪97</b></div>
+      </div>
+      <ul class="p97-list">
+        <li>תוכן מקצועי: איך לחשוב על תספורת, לא רק לבצע אותה</li>
+        <li>עסק: איך לבנות מספרה וקריירה שמחזיקות לאורך זמן</li>
+        <li>שיווק: איך להביא לקוחות ולבנות שם</li>
+        <li>מקומות מוגבלים, כ-120 משתתפים</li>
+      </ul>
+      <p class="p97-motto">"אם אעזור לילד אחד, עשיתי את שלי."</p>
+    </div>
+    <div class="side">
+      <div class="form-card beam">
+        <p>כרטיס אחד, ₪97. תשלום מאובטח בביט או בכרטיס אשראי.</p>
+        <!-- P97_PAY_LINK: replace the href below with the payment-page link (Bit + credit card) -->
+        <a class="btn" id="p97Pay" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">קנה כרטיס · ₪97 <span class="ar">←</span></a>
+        <div class="pay-row" aria-label="אמצעי תשלום"><span>ביט</span><span>כרטיס אשראי</span></div>
+        <a class="btn gold" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">שאלה על האירוע? וואטסאפ</a>
+      </div>
+      <p class="fine">המיקום המדויק והשעה יישלחו לכל מי שרכש כרטיס.</p>
+    </div>
+  </div>
 </section>
 
 <div class="marquees" aria-hidden="true">
