@@ -573,37 +573,114 @@ html.has-cur,html.has-cur *{cursor:none!important}
 
 @media (prefers-reduced-motion:reduce){.beam::before{animation:none}.prog-n,.step::before,.banner{transition:none}.qa details::details-content{transition:none}}
 
-/* Project 97 event */
-.p97{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--rule);background:radial-gradient(70% 50% at 85% 10%,rgba(214,177,106,.14),transparent 70%),radial-gradient(70% 60% at 10% 90%,rgba(123,77,255,.28),transparent 70%),linear-gradient(to bottom,#0a0618,var(--void))}
-.p97-num{position:absolute;z-index:-1;inset-inline-start:-2vw;top:4%;font-family:var(--cond);font-size:clamp(260px,62vw,560px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(214,177,106,.16);pointer-events:none;user-select:none}
-.p97 .wrap{display:grid;gap:44px}
-.p97 h2 .gold{display:block;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* ===== Project 97 ===== */
+.nav-97{color:var(--gold-hi)!important}
+.p97-pill{align-self:center;display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:0 8px 0 18px;padding-inline:18px 6px;border:1px solid rgba(214,177,106,.45);border-radius:99px;background:rgba(214,177,106,.08);color:var(--bone);font-size:15px;font-weight:600;letter-spacing:.04em;text-decoration:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:border-color .3s,background .3s}
+.p97-pill:hover{border-color:var(--gold-hi);background:rgba(214,177,106,.14)}
+.p97-pill i{width:8px;height:8px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 0 0 rgba(244,220,166,.7)}
+.p97-pill b{padding:6px 12px;border-radius:99px;background:var(--goldgrad);color:#1a1206;font-size:13px;letter-spacing:.06em;white-space:nowrap}
+.p97{overflow:hidden;border-block:1px solid var(--rule);background:radial-gradient(60% 40% at 80% 4%,rgba(214,177,106,.16),transparent 70%),radial-gradient(70% 50% at 10% 60%,rgba(123,77,255,.26),transparent 70%),linear-gradient(to bottom,#0b0619,var(--void) 60%,#0b0619)}
+.p97-ghost{position:absolute;z-index:-2;top:-2%;inset-inline-end:-6vw;font-family:var(--cond);font-size:clamp(300px,78vw,760px);line-height:.8;color:transparent;-webkit-text-stroke:1px rgba(214,177,106,.18);background:linear-gradient(100deg,transparent 30%,rgba(244,220,166,.22) 48%,transparent 66%) 0 0/250% 100% no-repeat;-webkit-background-clip:text;background-clip:text;pointer-events:none;user-select:none;transform:translate3d(0,var(--py,0px),0)}
+.p97 .wrap{display:flex;flex-direction:column;gap:56px}
+.p97-intro{display:flex;flex-direction:column;gap:22px}
+.p97 h2 .gold{display:block;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 26px rgba(214,177,106,.3))}
+.p97-count{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:520px}
+.p97-count div{display:flex;flex-direction:column;align-items:center;gap:6px;padding:16px 4px 12px;border:1px solid rgba(214,177,106,.3);border-radius:12px;background:linear-gradient(to bottom,rgba(255,255,255,.04) 50%,rgba(0,0,0,.22) 50%),#0d0918;overflow:hidden;perspective:300px}
+.p97-count b{font-family:var(--cond);font-weight:400;font-size:clamp(40px,11vw,56px);line-height:1;font-variant-numeric:tabular-nums;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent;display:block}
+.p97-count b.flip{animation:flip .5s cubic-bezier(.2,.7,.2,1)}
+@keyframes flip{0%{transform:rotateX(-80deg);opacity:.2}100%{transform:none;opacity:1}}
+.p97-count small{font-size:12px;letter-spacing:.2em;color:var(--ash)}
+.p97-grid{display:grid;gap:56px}
+.p97-main{display:flex;flex-direction:column;gap:64px;min-width:0}
+.p97-block{display:flex;flex-direction:column;gap:18px;min-width:0}
+.p97-block h3{font-family:var(--heb);font-weight:700;font-size:clamp(38px,8vw,54px);line-height:1;color:var(--bone);text-wrap:balance}
+.p97-block p{font-size:18px;line-height:1.7;color:#d8d2e4;max-width:38em}
+.p97-sub{color:var(--ash)!important}
 .p97-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
 .p97-facts div{display:flex;flex-direction:column;gap:8px;padding:22px 20px;background:#0c0817;min-width:0}
 .p97-facts small{font-size:13px;letter-spacing:.24em;color:var(--ash)}
 .p97-facts b{font-family:var(--heb);font-weight:700;font-size:34px;line-height:1;color:var(--bone)}
-.p97-facts b.num{font-family:var(--cond);font-weight:400;font-size:46px;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.p97-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;color:#ddd7e8;font-size:18px}
-.p97-list li{display:grid;grid-template-columns:20px minmax(0,1fr);gap:10px;align-items:baseline}
-.p97-list li::before{content:"✓";color:var(--gold);font-weight:700}
-.p97-motto{font-family:var(--mark);font-style:italic;font-size:clamp(24px,4.4vw,32px);line-height:1.3;color:var(--lilac);border-inline-start:2px solid var(--gold);padding-inline-start:18px}
-.p97 .form-card{width:100%;max-width:560px}
-.p97 .pay-row{display:flex;flex-wrap:wrap;gap:8px}
-.p97 .pay-row span{font-size:13px;letter-spacing:.12em;color:var(--ash);border:1px solid var(--rule);border-radius:99px;padding:6px 12px}
-.p97-vision,.p97-series{display:flex;flex-direction:column;gap:14px;max-width:38em}
-.p97-vision h3,.p97-series h3{font-family:var(--heb);font-weight:700;font-size:clamp(34px,7vw,46px);line-height:1;color:var(--bone)}
-.p97-vision p,.p97-series p{font-size:18px;line-height:1.7;color:#d8d2e4}
-.p97-series{padding:24px 22px;border:1px solid rgba(214,177,106,.35);border-radius:14px;background:rgba(214,177,106,.05)}
-.p97-series .p97-big{display:flex;align-items:baseline;flex-wrap:wrap;gap:12px;color:var(--gold-hi);font-weight:600}
-.p97-series .p97-big b{font-family:var(--cond);font-weight:400;font-size:44px;line-height:1;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.p97-five{display:flex;flex-direction:column;gap:14px;max-width:38em;padding:26px 22px;border:1px solid rgba(157,123,255,.35);border-radius:14px;background:rgba(123,77,255,.08)}
-.p97-five .five-tag{font-family:var(--cond);font-size:20px;letter-spacing:.3em;color:var(--gold)}
-.p97-five h3{font-family:var(--heb);font-weight:700;font-size:clamp(34px,7vw,46px);line-height:1;color:var(--bone)}
-.p97-five h3 span{font-family:var(--cond);font-weight:400}
-.p97-five > p{font-size:18px;line-height:1.7;color:#d8d2e4}
-.p97-five .link{align-self:flex-start;color:var(--gold-hi)}
-.p97-bar{display:none}
-@media (min-width:960px){.p97 .wrap{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:start;gap:72px}.p97-facts{grid-template-columns:repeat(4,minmax(0,1fr))}.p97 .side{position:sticky;top:110px;display:flex;flex-direction:column;gap:28px}}
+.p97-facts b.num{font-family:var(--cond);font-weight:400;font-size:46px;font-variant-numeric:tabular-nums;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p97-learn{list-style:none;padding:0;display:grid;gap:12px}
+.p97-learn li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;align-items:start;padding:18px;border:1px solid var(--rule);border-radius:12px;background:rgba(14,10,25,.6);transition:border-color .3s,transform .3s}
+.p97-learn li:hover{border-color:rgba(214,177,106,.5);transform:translateY(-2px)}
+.p97-learn .ic{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid rgba(214,177,106,.45);color:var(--gold-hi)}
+.p97-learn .ic svg{width:20px;height:20px}
+.p97-learn b{display:block;font-size:20px;color:var(--bone);margin-bottom:2px}
+.p97-learn p{font-size:16px;color:var(--ash)}
+.p97-motto{display:flex;flex-direction:column;gap:4px;margin-top:10px;padding:26px 0 0;border-top:1px solid var(--rule);font-family:var(--mark);font-style:italic;font-size:clamp(30px,6vw,44px);line-height:1.2;color:var(--lilac)}
+.p97-motto span:last-of-type{background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p97-motto cite{margin-top:10px;font-family:var(--text);font-style:normal;font-size:14px;letter-spacing:.2em;color:var(--ash)}
+.p97-months{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.p97-months li{display:flex;flex-direction:column;gap:6px;padding:16px 14px;min-width:0;border:1px dashed var(--rule);border-radius:12px;color:var(--ash)}
+.p97-months small{font-size:13px;letter-spacing:.18em}
+.p97-months b{font-family:var(--heb);font-size:26px;line-height:1;color:#7d7590}
+.p97-months em{font-style:normal;font-size:13px;line-height:1.4}
+.p97-months li.now{grid-column:1/-1;border:1px solid rgba(214,177,106,.55);background:linear-gradient(120deg,rgba(214,177,106,.14),rgba(123,77,255,.1));color:var(--gold-hi)}
+.p97-months li.now b{font-family:var(--cond);font-weight:400;font-size:52px;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p97-months li.now em{font-size:17px;font-weight:600;color:var(--gold-hi)}
+.p97-path{position:relative;list-style:none;padding:0;display:flex;flex-direction:column;gap:14px}
+.p97-path::before{content:"";position:absolute;top:28px;bottom:28px;inset-inline-start:27px;width:1px;background:var(--rule)}
+.p97-path::after{content:"";position:absolute;top:28px;bottom:28px;inset-inline-start:27px;width:1px;background:linear-gradient(to bottom,var(--gold-hi),var(--violet-hi));transform-origin:50% 0;transform:scaleY(var(--fill,1))}
+.p97-path li{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:18px;align-items:start}
+.p97-path .pn{position:relative;z-index:1;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;border:1px solid rgba(214,177,106,.5);background:#0c0817;font-family:var(--cond);font-size:24px;color:var(--gold-hi);transition:background .5s,color .5s,box-shadow .5s}
+.p97-path li.lit .pn{background:var(--goldgrad);color:#1a1206;box-shadow:0 0 0 6px rgba(214,177,106,.12),0 10px 30px -8px rgba(214,177,106,.7)}
+.p97-path li > div{display:flex;flex-direction:column;gap:8px;padding:16px 18px 20px;border:1px solid var(--rule);border-radius:14px;background:rgba(14,10,25,.7);min-width:0}
+.p97-path li.five > div{border-color:rgba(157,123,255,.45);background:linear-gradient(140deg,rgba(123,77,255,.18),rgba(14,10,25,.8) 60%)}
+.p97-path small{font-family:var(--cond);font-size:17px;letter-spacing:.28em;color:var(--gold)}
+.p97-path b{font-size:22px;color:var(--bone)}
+.p97-path p{font-size:16px;color:var(--ash)}
+.p97-path .link{align-self:flex-start;margin-top:6px;font-size:14px;letter-spacing:.12em}
+.p97-side{display:flex;flex-direction:column;gap:16px;min-width:0;order:-1}
+.p97-side > .btn{width:100%}
+.ticket-wrap{perspective:900px;filter:drop-shadow(0 30px 50px rgba(123,77,255,.45)) drop-shadow(0 4px 14px rgba(0,0,0,.6))}
+.ticket{--stub:104px;--mx:50%;--my:30%;position:relative;display:flex;flex-direction:column;border-radius:20px;background:radial-gradient(120% 80% at 100% 0%,rgba(214,177,106,.22),transparent 60%),linear-gradient(160deg,#1a0f3a,#0e0a19 55%,#120a28);
+  -webkit-mask:radial-gradient(circle 15px at 0 calc(100% - var(--stub)),#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 15px at 100% calc(100% - var(--stub)),#0000 97%,#000) right/51% 100% no-repeat;
+  mask:radial-gradient(circle 15px at 0 calc(100% - var(--stub)),#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 15px at 100% calc(100% - var(--stub)),#0000 97%,#000) right/51% 100% no-repeat;
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .5s cubic-bezier(.2,.7,.2,1);transform-style:preserve-3d}
+.ticket::before{content:"";position:absolute;inset:0;border-radius:inherit;border:1px solid rgba(214,177,106,.45);pointer-events:none}
+.ticket::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;mix-blend-mode:screen;opacity:.75;background:radial-gradient(circle at var(--mx) var(--my),rgba(255,255,255,.22),transparent 38%),linear-gradient(115deg,transparent 20%,rgba(157,123,255,.18) 38%,rgba(244,220,166,.22) 50%,rgba(120,220,255,.12) 60%,transparent 78%);background-size:100% 100%,220% 100%;background-position:0 0,var(--hx,30%) 0}
+.t-main{display:flex;flex-direction:column;gap:20px;padding:26px 24px 24px}
+.t-top{display:flex;justify-content:space-between;gap:12px;font-family:var(--cond);font-size:15px;letter-spacing:.3em;color:var(--gold)}
+.t-name{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(214,177,106,.25);padding-bottom:16px}
+.t-name span{font-family:var(--heb);font-weight:700;font-size:44px;line-height:.9;color:var(--bone)}
+.t-name b{font-family:var(--cond);font-weight:400;font-size:112px;line-height:.78;background:var(--goldgrad);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent}
+.t-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.t-meta div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.t-meta dt{font-size:12px;letter-spacing:.2em;color:var(--ash)}
+.t-meta dd{font-family:var(--cond);font-size:26px;line-height:1;color:var(--bone);white-space:nowrap}
+.ticket .btn{width:100%;padding:0 18px;letter-spacing:.06em}
+.t-pay{display:flex;justify-content:center;gap:8px}
+.t-pay span{font-size:13px;letter-spacing:.12em;color:var(--ash);border:1px solid var(--rule);border-radius:99px;padding:6px 12px}
+.t-stub{height:var(--stub);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 24px;border-top:2px dashed rgba(214,177,106,.35);margin-inline:16px;padding-inline:8px}
+.t-bars{flex:1;max-width:190px;height:44px;background:repeating-linear-gradient(90deg,var(--gold-hi) 0 2px,transparent 2px 4px,var(--gold-hi) 4px 5px,transparent 5px 9px,var(--gold-hi) 9px 12px,transparent 12px 14px,var(--gold-hi) 14px 15px,transparent 15px 19px);opacity:.75}
+.t-no{font-family:var(--cond);font-size:20px;letter-spacing:.16em;color:var(--lilac);white-space:nowrap}
+.p97-bar{position:fixed;z-index:34;inset:auto 0 0;padding:10px max(14px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(14px,env(safe-area-inset-left,0px));background:rgba(9,5,20,.86);-webkit-backdrop-filter:blur(16px) saturate(1.3);backdrop-filter:blur(16px) saturate(1.3);border-top:1px solid rgba(214,177,106,.35);transform:translateY(110%);transition:transform .5s cubic-bezier(.2,.7,.2,1);visibility:hidden}
+.p97-bar.on{transform:none;visibility:visible}
+.p97-bar-in{max-width:1200px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.p97-bar p{display:flex;flex-direction:column;gap:2px;min-width:0}
+.p97-bar p b{font-family:var(--heb);font-size:24px;line-height:1;background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.p97-bar p span{font-size:13px;color:var(--ash);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.p97-bar p em{font-style:normal;color:var(--gold-hi)}
+.p97-bar .btn{min-height:48px;padding:0 20px;font-size:15px;letter-spacing:.05em;flex:none}
+.fab{transition:bottom .5s cubic-bezier(.2,.7,.2,1),transform .25s}
+html.bar-on .fab{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+@media (min-width:700px){.p97-facts{grid-template-columns:repeat(4,minmax(0,1fr))}.p97-learn{grid-template-columns:repeat(3,minmax(0,1fr))}.p97-learn li{grid-template-columns:1fr}.p97-months{grid-template-columns:2fr 1fr 1fr}.p97-months li.now{grid-column:auto}}
+@media (min-width:1000px){.p97-grid{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:72px;align-items:start}.p97-side{position:sticky;top:110px;order:0;grid-column:2;grid-row:1}.p97-main{grid-column:1;grid-row:1}.p97 .wrap{gap:72px}.p97-intro{max-width:860px}}
+@media (prefers-reduced-motion:no-preference){
+  .p97-pill i{animation:ping 2s ease-out infinite}
+  @keyframes ping{0%{box-shadow:0 0 0 0 rgba(244,220,166,.7)}80%,100%{box-shadow:0 0 0 12px rgba(244,220,166,0)}}
+  .p97-ghost{animation:sheen 7s ease-in-out infinite}
+  @keyframes sheen{0%,100%{background-position:120% 0}50%{background-position:-20% 0}}
+  .t-name b{animation:foil 5s ease-in-out infinite}
+  @keyframes foil{0%,100%{background-position:0 0}50%{background-position:100% 0}}
+  html.fx .p97-path::after{transform:scaleY(var(--fill,0))}
+  html.fx .p97-learn li{opacity:.001;transform:translateY(24px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1),border-color .3s}
+  html.fx .p97-learn.in li{opacity:1;transform:none}
+  html.fx .p97-learn.in li:nth-child(2){transition-delay:.12s}
+  html.fx .p97-learn.in li:nth-child(3){transition-delay:.24s}
+}
 </style>
 </head>
 <body>
@@ -617,7 +694,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 <header class="nav">
   <div class="wrap">
     <a class="nav-logo" href="#top"><img src="media/logo-gold-sm.webp" width="340" height="186" alt="Picasso Academy, איליי ביתן"></a>
-    <nav class="links" aria-label="ניווט באתר"><a href="#p97">פרויקט 97</a><a href="#about">איליי</a><a href="#method">השיטה</a><a href="#spectrum">Spectrum</a><a href="#programs">מסלולים</a><a href="#students">תלמידים</a><a href="#faq">שאלות</a></nav>
+    <nav class="links" aria-label="ניווט באתר"><a href="#about">איליי</a><a href="#method">השיטה</a><a href="#spectrum">Spectrum</a><a href="#students">תלמידים</a><a class="nav-97" href="#p97">פרויקט 97</a><a href="#programs">מסלולים</a><a href="#faq">שאלות</a></nav>
     <a class="btn nav-cta" href="#contact">לשיחת אפיון</a>
     <button class="menu" id="menuBtn" aria-label="תפריט" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
   </div>
@@ -625,7 +702,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
 <div class="drawer" id="drawer" hidden>
   <button class="menu close" id="menuClose" aria-label="סגור תפריט"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
   <img src="media/logo-gold-sm.webp" width="340" height="186" alt="">
-  <a href="#p97">פרויקט 97</a><a href="#about">איליי</a><a href="#method">השיטה</a><a href="#spectrum">Spectrum</a><a href="#programs">מסלולים</a><a href="#students">תלמידים</a><a href="#faq">שאלות</a><a href="#contact">צור קשר</a>
+  <a href="#about">איליי</a><a href="#method">השיטה</a><a href="#spectrum">Spectrum</a><a href="#students">תלמידים</a><a class="nav-97" href="#p97">פרויקט 97</a><a href="#programs">מסלולים</a><a href="#faq">שאלות</a><a href="#contact">צור קשר</a>
 </div>
 
 <main>
@@ -644,6 +721,7 @@ html.has-cur,html.has-cur *{cursor:none!important}
       </div>
     </div>
     <div class="hero-copy">
+      <a class="p97-pill" href="#p97"><i aria-hidden="true"></i><span>פרויקט 97 · 22.11 · תל אביב</span><b id="p97PillDays">₪97</b></a>
       <h1><span>תפסיק לנחש.</span><span class="chr">תתחיל להבין.</span></h1>
       <p class="academy-line" lang="en">Men's Barbering Academy</p>
       <p class="lead">מלמד ספרים להבין, לא להעתיק. מאפס לספר, או מספר לסמכות.</p>
@@ -662,61 +740,6 @@ html.has-cur,html.has-cur *{cursor:none!important}
     <div><dt>12</dt><dd>תשלומים לבחירה</dd></div>
     <div><dt lang="en">LONDON</dt><dd>הוכשר אצל <span class="nw">Josh O.P</span></dd></div>
   </dl>
-</section>
-
-<section class="sec p97" id="p97" aria-label="פרויקט 97">
-  <span class="p97-num" aria-hidden="true">97</span>
-  <div class="wrap">
-    <div class="head">
-      <p class="tag" lang="en">Project 97 · Monthly Live Event</p>
-      <h2>פרויקט 97.<span class="gold">יום אחד שמשנה כיוון.</span></h2>
-      <p class="lead">סדנה חיה בתל אביב לספרים צעירים, במחיר שכל אחד יכול לעמוד בו. מקצוע, עסק ושיווק, עם איליי ביתן ונועם דרעי, ביום אחד.</p>
-      <div class="p97-facts">
-        <div><small>תאריך</small><b>22.11</b></div>
-        <div><small>יום</small><b>ראשון</b></div>
-        <div><small>מיקום</small><b>תל אביב</b></div>
-        <div><small>כרטיס</small><b class="num">₪97</b></div>
-      </div>
-      <ul class="p97-list">
-        <li>תוכן מקצועי: איך לחשוב על תספורת, לא רק לבצע אותה</li>
-        <li>עסק: איך לבנות מספרה וקריירה שמחזיקות לאורך זמן</li>
-        <li>שיווק: איך להביא לקוחות ולבנות שם</li>
-        <li>מקומות מוגבלים, כ-120 משתתפים</li>
-      </ul>
-      <div class="p97-vision">
-        <h3>למה פרויקט 97</h3>
-        <p>הכשרה טובה בתחום עולה אלפי שקלים, והרבה ספרים צעירים פשוט לא יכולים להרשות לעצמם אותה. אז הם לומדים לבד, מנחשים ונתקעים. פרויקט 97 נולד כדי לשבור את זה: לקחת את הידע המקצועי, העסקי והשיווקי שבדרך כלל שמור למי שיכול לשלם, ולפתוח אותו לכל ספר שרוצה להתקדם, במחיר של 97 שקל.</p>
-        <p>המטרה היא לא רק יום של תוכן. המטרה היא לבנות קהילה של ספרים צעירים שמבינים מה הם עושים, מכירים אחד את השני וממשיכים לגדול ביחד.</p>
-      </div>
-      <div class="p97-series">
-        <h3>זה לא אירוע חד־פעמי</h3>
-        <p>פרויקט 97 הוא סדרה קבועה. נקיים אירוע לפחות פעם בחודש, כדי שלכל ספר צעיר תהיה תמיד הזדמנות קרובה ללמוד, לשאול ולהתקדם.</p>
-        <p class="p97-big"><b>22.11</b> האירוע הזה יהיה הגדול ביותר שעשינו עד היום.</p>
-      </div>
-      <div class="p97-five">
-        <p class="five-tag" lang="en">THE FIVE</p>
-        <h3>ההמשך: <span lang="en">The Five</span></h3>
-        <p>אחרי האירוע נפתחים 5 מקומות בלבד לליווי אישי של 30 יום, למי שרוצה לקחת את מה שלמד ולהפוך אותו לתוצאות.</p>
-        <ul class="p97-list">
-          <li>אבחון: איפה אתה נמצא היום ומה עוצר אותך</li>
-          <li>תוכנית אישית שנבנית רק בשבילך</li>
-          <li>מפגשי מעקב לאורך 30 יום</li>
-        </ul>
-        <a class="link" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20The%20Five" target="_blank" rel="noopener">לפרטים על The Five <span>←</span></a>
-      </div>
-      <p class="p97-motto">"אם אעזור לילד אחד, עשיתי את שלי."</p>
-    </div>
-    <div class="side">
-      <div class="form-card beam">
-        <p>כרטיס אחד, ₪97. תשלום מאובטח בביט או בכרטיס אשראי.</p>
-        <!-- P97_PAY_LINK: replace the href below with the payment-page link (Bit + credit card) -->
-        <a class="btn" id="p97Pay" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">קנה כרטיס · ₪97 <span class="ar">←</span></a>
-        <div class="pay-row" aria-label="אמצעי תשלום"><span>ביט</span><span>כרטיס אשראי</span></div>
-        <a class="btn gold" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">שאלה על האירוע? וואטסאפ</a>
-      </div>
-      <p class="fine">המיקום המדויק והשעה יישלחו לכל מי שרכש כרטיס.</p>
-    </div>
-  </div>
 </section>
 
 <div class="marquees" aria-hidden="true">
@@ -811,6 +834,176 @@ html.has-cur,html.has-cur *{cursor:none!important}
   </div>
 </section>
 
+<section class="sec" id="classroom">
+  <div class="wrap">
+    <div class="head">
+      <p class="tag" lang="en">In The Classroom</p>
+      <h2>לומדים<span class="chr">ליד הכיסא.</span></h2>
+      <p class="lead">הדגמה, תרגול ותיקון בזמן אמת. ככה נראים השיעורים והסדנאות.</p>
+      <a class="link" href="https://instagram.com/ilay.bitan_" target="_blank" rel="noopener"><span lang="en">View more on Instagram</span> <span>←</span></a>
+    </div>
+    <div class="wall">
+      <video class="loop w" muted loop playsinline preload="none" poster="media/wall-7.jpg" aria-label="איליי מסביר לקבוצה ליד הכיסא"><source src="media/wall-7.mp4" type="video/mp4"></video>
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-2.jpg" aria-label="הדגמה ליד הכיסא"><source src="media/wall-2.mp4" type="video/mp4"></video>
+      <img src="media/stage-demo.jpg" width="1050" height="1400" alt="איליי מדגים חיתוך באירוע" loading="lazy">
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-4.jpg" aria-label="איליי עובד עם תלמיד על התספורת"><source src="media/wall-4.mp4" type="video/mp4"></video>
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-3.jpg" aria-label="הדגמה עם פן"><source src="media/wall-3.mp4" type="video/mp4"></video>
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-5.jpg" aria-label="איליי מסביר לתלמיד"><source src="media/wall-5.mp4" type="video/mp4"></video>
+      <img class="w" src="media/class-audience.jpg" width="1100" height="733" alt="משתתפים מצלמים את ההדגמה" loading="lazy">
+      <video class="loop" muted loop playsinline preload="none" poster="media/wall-6.jpg" aria-label="הדגמה מול עשרות משתתפים"><source src="media/wall-6.mp4" type="video/mp4"></video>
+      <video class="loop w" muted loop playsinline preload="none" poster="media/wall-8.jpg" aria-label="קבוצה סביב הכיסא"><source src="media/wall-8.mp4" type="video/mp4"></video>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="students">
+  <div class="wrap">
+    <div class="head center">
+      <p class="tag" lang="en">Testimonials</p>
+      <h2>תלמידים<span class="chr">מספרים</span></h2>
+      <p class="lead">מתוך הודעות אמיתיות שתלמידים שלחו לי, מילה במילה.</p>
+    </div>
+    <div class="voices">
+      <video controls playsinline preload="metadata" poster="media/testimonial-1.jpg" src="media/testimonial-1.mp4" aria-label="תלמיד מספר על הלימודים באקדמיה" data-cursor="PLAY"></video>
+      <video controls playsinline preload="metadata" poster="media/testimonial-2.jpg" src="media/testimonial-2.mp4" aria-label="תלמיד מספר על הלימודים באקדמיה" data-cursor="PLAY"></video>
+    </div>
+    <div class="quotes">
+      <blockquote class="quote"><p>השיטה הזאת הצילה אותי</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>תלמיד השתלמות, על Spectrum</span></footer></blockquote>
+      <blockquote class="quote"><p>גם הכל עם המספריים שלימדת בהשתלמות עזר לי בטירוף. לפני זה לא הבנתי מה אני עושה, ועכשיו אני מקצוען קצה</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>תלמיד השתלמות</span></footer></blockquote>
+      <blockquote class="quote"><p>פתאום אני מתחיל לקלוט דברים בבום שלפני לא קלטתי, וזה רק מיום אחד. מטורף אחי</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>משתתף ביום השתלמות</span></footer></blockquote>
+      <blockquote class="quote"><p>איך אני מחכה כבר ללמוד אותך עוד פעם. איך שיפרת אותי בהכל, אתה אפילו לא מבין</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>תלמיד</span></footer></blockquote>
+      <blockquote class="quote"><p>איזה כיף שאתה מעלה תוצאה שלי עם השיטה שלך. מתגאה להיות חלק מהאנשים שלמדו אותה</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>תלמיד</span></footer></blockquote>
+      <blockquote class="quote"><p>תודה רבה, הסרטונים שלך עוזרים לי מאוד</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>מתוך הודעה באינסטגרם</span></footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="grad" aria-label="יום השתלמות">
+  <div class="grad-photo"><img id="gradImg" src="media/graduation-sm.jpg" srcset="media/graduation-sm.jpg 1100w, media/graduation.jpg 2000w" sizes="100vw" width="1100" height="733" alt="איליי עם עשרות משתתפים שמחזיקים תעודות של Picasso Academy" loading="lazy"></div>
+  <div class="wrap">
+    <p class="tag" lang="en">Education Day</p>
+    <h2>יום השתלמות.<span class="chr">ותעודה ביד.</span></h2>
+    <p>ככה נראה יום השתלמות של Picasso Academy בנושא תספורות ופיידים: עשרות משתתפים, וכל אחד יוצא עם תעודה.</p>
+    <a class="link" href="#p97">האירוע הבא: פרויקט 97, 22.11 <span>←</span></a>
+    <div class="cohorts">
+      <img src="media/cohort-group.jpg" width="788" height="1400" alt="מחזור של Picasso Academy עם התעודות" loading="lazy">
+      <img src="media/cohort-small.jpg" width="1050" height="1400" alt="בוגר מחזיק תעודה עם הצוות" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="sec p97" id="p97" aria-labelledby="p97Title">
+  <canvas class="stars" aria-hidden="true"></canvas>
+  <span class="p97-ghost" aria-hidden="true">97</span>
+  <div class="wrap">
+    <div class="p97-intro">
+      <p class="tag" lang="en">Project 97 · Monthly Live Event</p>
+      <h2 id="p97Title">פרויקט 97.<span class="gold">יום אחד שמשנה כיוון.</span></h2>
+      <p class="lead">סדנה חיה בתל אביב לספרים צעירים, במחיר שכל אחד יכול לעמוד בו. מקצוע, עסק ושיווק, עם איליי ביתן ונועם דרעי, ביום אחד.</p>
+      <div class="p97-count" id="p97Count" role="timer" aria-label="הזמן שנותר עד האירוע ב-22.11">
+        <div><b data-u="d">--</b><small>ימים</small></div>
+        <div><b data-u="h">--</b><small>שעות</small></div>
+        <div><b data-u="m">--</b><small>דקות</small></div>
+        <div><b data-u="s">--</b><small>שניות</small></div>
+      </div>
+      <div class="p97-facts">
+        <div><small>תאריך</small><b>22.11</b></div>
+        <div><small>יום</small><b>ראשון</b></div>
+        <div><small>מיקום</small><b>תל אביב</b></div>
+        <div><small>כרטיס</small><b class="num">₪<span data-count="97">97</span></b></div>
+      </div>
+    </div>
+
+    <div class="p97-grid">
+      <div class="p97-main">
+
+        <div class="p97-block">
+          <h3>מה לוקחים מהיום הזה</h3>
+          <ul class="p97-learn">
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>מקצוע</b><p>איך לחשוב על תספורת, לא רק לבצע אותה.</p></div></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>עסק</b><p>איך לבנות מספרה וקריירה שמחזיקות לאורך זמן.</p></div></li>
+            <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>שיווק</b><p>איך להביא לקוחות ולבנות שם.</p></div></li>
+          </ul>
+        </div>
+
+        <div class="p97-block p97-why">
+          <h3>למה <span lang="en">97</span></h3>
+          <p>הכשרה טובה בתחום עולה אלפי שקלים, והרבה ספרים צעירים פשוט לא יכולים להרשות לעצמם אותה. אז הם לומדים לבד, מנחשים ונתקעים. פרויקט 97 נולד כדי לשבור את זה: לקחת את הידע המקצועי, העסקי והשיווקי שבדרך כלל שמור למי שיכול לשלם, ולפתוח אותו לכל ספר שרוצה להתקדם.</p>
+          <p>המטרה היא לא רק יום של תוכן. המטרה היא לבנות קהילה של ספרים צעירים שמבינים מה הם עושים, מכירים אחד את השני וממשיכים לגדול ביחד.</p>
+          <blockquote class="p97-motto"><span>"אם אעזור לילד אחד,</span><span>עשיתי את שלי."</span><cite>איליי ביתן</cite></blockquote>
+        </div>
+
+        <div class="p97-block">
+          <h3>זה לא אירוע חד־פעמי</h3>
+          <p class="p97-sub">פרויקט 97 הוא סדרה קבועה. אירוע לפחות פעם בחודש, כדי שלכל ספר צעיר תהיה תמיד הזדמנות קרובה ללמוד, לשאול ולהתקדם.</p>
+          <ol class="p97-months" aria-label="אירועי פרויקט 97 הקרובים">
+            <li class="now"><small>נובמבר</small><b>22.11</b><em>האירוע הגדול ביותר שעשינו עד היום</em></li>
+            <li><small>דצמבר</small><b>בקרוב</b><em>התאריך יפורסם</em></li>
+            <li><small>ינואר</small><b>בקרוב</b><em>התאריך יפורסם</em></li>
+          </ol>
+        </div>
+
+        <div class="p97-block">
+          <h3>מה קורה אחרי</h3>
+          <p class="p97-sub">פרויקט 97 הוא נקודת ההתחלה. מי שרוצה להמשיך, יש לו לאן.</p>
+          <ol class="p97-path" id="p97Path">
+            <li><span class="pn" lang="en">01</span><div><small lang="en">PROJECT 97</small><b>יום אחד באירוע</b><p>מקבלים כיוון, כלים ואנשים לצידך. ₪97.</p></div></li>
+            <li class="five"><span class="pn" lang="en">02</span><div><small lang="en">THE FIVE</small><b>30 יום של ליווי אישי</b><p>אחרי האירוע נפתחים 5 מקומות בלבד, למי שרוצה להפוך את מה שלמד לתוצאות: אבחון של איפה אתה היום ומה עוצר אותך, תוכנית אישית שנבנית רק בשבילך ומפגשי מעקב לאורך 30 יום.</p><a class="link" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20The%20Five" target="_blank" rel="noopener">לפרטים על The Five <span>←</span></a></div></li>
+            <li><span class="pn" lang="en">03</span><div><small lang="en">PICASSO ACADEMY</small><b>מסלול מלא באקדמיה</b><p>Foundations, Picasso Legacy או ליווי אישי, בקבוצות של עד 4 תלמידים.</p><a class="link" href="#programs">למסלולי האקדמיה <span>←</span></a></div></li>
+          </ol>
+        </div>
+      </div>
+
+      <aside class="p97-side" aria-label="רכישת כרטיס">
+        <div class="ticket-wrap">
+          <div class="ticket" id="ticket">
+            <div class="t-main">
+              <div class="t-top"><span lang="en">PICASSO ACADEMY</span><span lang="en">ADMIT ONE</span></div>
+              <p class="t-name"><span>פרויקט</span><b lang="en">97</b></p>
+              <dl class="t-meta">
+                <div><dt>תאריך</dt><dd>22.11.26</dd></div>
+                <div><dt>עיר</dt><dd>תל אביב</dd></div>
+                <div><dt>מחיר</dt><dd>₪97</dd></div>
+              </dl>
+              <!-- P97_PAY_LINK: replace both hrefs marked data-pay with the payment-page link (Bit + credit card) -->
+              <a class="btn" id="p97Pay" data-pay href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">קנה כרטיס · ₪97 <span class="ar">←</span></a>
+              <p class="t-pay"><span>ביט</span><span>כרטיס אשראי</span></p>
+            </div>
+            <div class="t-stub" aria-hidden="true">
+              <span class="t-bars"></span>
+              <span class="t-no" lang="en">P-97 · 22.11</span>
+            </div>
+          </div>
+        </div>
+        <a class="btn gold" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">שאלה על האירוע? וואטסאפ</a>
+        <p class="fine">מקומות מוגבלים, כ-120 משתתפים. המיקום המדויק והשעה יישלחו לכל מי שרכש כרטיס.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="why">
+  <div class="wrap">
+    <div class="why-card beam">
+      <div class="why-text">
+        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 8l4 4 5-7 5 7 4-4-2 11H5L3 8z"/></svg><span lang="en">WHY PICASSO</span></span>
+        <h2>מה שונה כאן<span class="chr">מקורס רגיל.</span></h2>
+        <ul class="checks">
+          <li>מבינים, לא מעתיקים. כל החלטה נשענת על הלקוח, על השיער ועל מבנה הראש</li>
+          <li>שיטת Spectrum, שיטת פייד מקורית שבנויה על גוונים ולא על מספרי מכונה</li>
+          <li>מקצוע ועסק ביחד: תוכן, שיווק, מכירה וניהול, כדי שהכיסא שלך יתמלא</li>
+          <li>עד 4 תלמידים, עם אבחון אישי ופידבק בזמן אמת</li>
+        </ul>
+        <a class="btn" href="#contact">פנה עכשיו לפרטים <span class="ar">←</span></a>
+      </div>
+      <div class="why-photo">
+        <img src="media/group-1.jpg" alt="איליי עם תלמידים שמחזיקים תעודות סיום" width="1200" height="1600" loading="lazy">
+        <div class="badge"><small lang="en">SMALL GROUPS</small><b>עד 4 תלמידים בקבוצה</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sec programs" id="programs">
   <div class="wrap">
     <div class="head">
@@ -894,85 +1087,6 @@ html.has-cur,html.has-cur *{cursor:none!important}
   </div>
 </section>
 
-<section class="sec" id="why">
-  <div class="wrap">
-    <div class="why-card beam">
-      <div class="why-text">
-        <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 8l4 4 5-7 5 7 4-4-2 11H5L3 8z"/></svg><span lang="en">WHY PICASSO</span></span>
-        <h2>מה שונה כאן<span class="chr">מקורס רגיל.</span></h2>
-        <ul class="checks">
-          <li>מבינים, לא מעתיקים. כל החלטה נשענת על הלקוח, על השיער ועל מבנה הראש</li>
-          <li>שיטת Spectrum, שיטת פייד מקורית שבנויה על גוונים ולא על מספרי מכונה</li>
-          <li>מקצוע ועסק ביחד: תוכן, שיווק, מכירה וניהול, כדי שהכיסא שלך יתמלא</li>
-          <li>עד 4 תלמידים, עם אבחון אישי ופידבק בזמן אמת</li>
-        </ul>
-        <a class="btn" href="#contact">פנה עכשיו לפרטים <span class="ar">←</span></a>
-      </div>
-      <div class="why-photo">
-        <img src="media/group-1.jpg" alt="איליי עם תלמידים שמחזיקים תעודות סיום" width="1200" height="1600" loading="lazy">
-        <div class="badge"><small lang="en">SMALL GROUPS</small><b>עד 4 תלמידים בקבוצה</b></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="classroom">
-  <div class="wrap">
-    <div class="head">
-      <p class="tag" lang="en">In The Classroom</p>
-      <h2>לומדים<span class="chr">ליד הכיסא.</span></h2>
-      <p class="lead">הדגמה, תרגול ותיקון בזמן אמת. ככה נראים השיעורים והסדנאות.</p>
-      <a class="link" href="https://instagram.com/ilay.bitan_" target="_blank" rel="noopener"><span lang="en">View more on Instagram</span> <span>←</span></a>
-    </div>
-    <div class="wall">
-      <video class="loop w" muted loop playsinline preload="none" poster="media/wall-7.jpg" aria-label="איליי מסביר לקבוצה ליד הכיסא"><source src="media/wall-7.mp4" type="video/mp4"></video>
-      <video class="loop" muted loop playsinline preload="none" poster="media/wall-2.jpg" aria-label="הדגמה ליד הכיסא"><source src="media/wall-2.mp4" type="video/mp4"></video>
-      <img src="media/stage-demo.jpg" width="1050" height="1400" alt="איליי מדגים חיתוך באירוע" loading="lazy">
-      <video class="loop" muted loop playsinline preload="none" poster="media/wall-4.jpg" aria-label="איליי עובד עם תלמיד על התספורת"><source src="media/wall-4.mp4" type="video/mp4"></video>
-      <video class="loop" muted loop playsinline preload="none" poster="media/wall-3.jpg" aria-label="הדגמה עם פן"><source src="media/wall-3.mp4" type="video/mp4"></video>
-      <video class="loop" muted loop playsinline preload="none" poster="media/wall-5.jpg" aria-label="איליי מסביר לתלמיד"><source src="media/wall-5.mp4" type="video/mp4"></video>
-      <img class="w" src="media/class-audience.jpg" width="1100" height="733" alt="משתתפים מצלמים את ההדגמה" loading="lazy">
-      <video class="loop" muted loop playsinline preload="none" poster="media/wall-6.jpg" aria-label="הדגמה מול עשרות משתתפים"><source src="media/wall-6.mp4" type="video/mp4"></video>
-      <video class="loop w" muted loop playsinline preload="none" poster="media/wall-8.jpg" aria-label="קבוצה סביב הכיסא"><source src="media/wall-8.mp4" type="video/mp4"></video>
-    </div>
-  </div>
-</section>
-
-<section class="grad" aria-label="יום השתלמות">
-  <div class="grad-photo"><img id="gradImg" src="media/graduation-sm.jpg" srcset="media/graduation-sm.jpg 1100w, media/graduation.jpg 2000w" sizes="100vw" width="1100" height="733" alt="איליי עם עשרות משתתפים שמחזיקים תעודות של Picasso Academy" loading="lazy"></div>
-  <div class="wrap">
-    <p class="tag" lang="en">Education Day</p>
-    <h2>יום השתלמות.<span class="chr">ותעודה ביד.</span></h2>
-    <p>ככה נראה יום השתלמות של Picasso Academy בנושא תספורות ופיידים: עשרות משתתפים, וכל אחד יוצא עם תעודה.</p>
-    <div class="cohorts">
-      <img src="media/cohort-group.jpg" width="788" height="1400" alt="מחזור של Picasso Academy עם התעודות" loading="lazy">
-      <img src="media/cohort-small.jpg" width="1050" height="1400" alt="בוגר מחזיק תעודה עם הצוות" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<section class="sec" id="students">
-  <div class="wrap">
-    <div class="head center">
-      <p class="tag" lang="en">Testimonials</p>
-      <h2>תלמידים<span class="chr">מספרים</span></h2>
-      <p class="lead">מתוך הודעות אמיתיות שתלמידים שלחו לי, מילה במילה.</p>
-    </div>
-    <div class="voices">
-      <video controls playsinline preload="metadata" poster="media/testimonial-1.jpg" src="media/testimonial-1.mp4" aria-label="תלמיד מספר על הלימודים באקדמיה" data-cursor="PLAY"></video>
-      <video controls playsinline preload="metadata" poster="media/testimonial-2.jpg" src="media/testimonial-2.mp4" aria-label="תלמיד מספר על הלימודים באקדמיה" data-cursor="PLAY"></video>
-    </div>
-    <div class="quotes">
-      <blockquote class="quote"><p>השיטה הזאת הצילה אותי</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>תלמיד השתלמות, על Spectrum</span></footer></blockquote>
-      <blockquote class="quote"><p>גם הכל עם המספריים שלימדת בהשתלמות עזר לי בטירוף. לפני זה לא הבנתי מה אני עושה, ועכשיו אני מקצוען קצה</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>תלמיד השתלמות</span></footer></blockquote>
-      <blockquote class="quote"><p>פתאום אני מתחיל לקלוט דברים בבום שלפני לא קלטתי, וזה רק מיום אחד. מטורף אחי</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>משתתף ביום השתלמות</span></footer></blockquote>
-      <blockquote class="quote"><p>איך אני מחכה כבר ללמוד אותך עוד פעם. איך שיפרת אותי בהכל, אתה אפילו לא מבין</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>תלמיד</span></footer></blockquote>
-      <blockquote class="quote"><p>איזה כיף שאתה מעלה תוצאה שלי עם השיטה שלך. מתגאה להיות חלק מהאנשים שלמדו אותה</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>תלמיד</span></footer></blockquote>
-      <blockquote class="quote"><p>תודה רבה, הסרטונים שלך עוזרים לי מאוד</p><footer><span class="av" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12z"/></svg></span><span>מתוך הודעה באינסטגרם</span></footer></blockquote>
-    </div>
-  </div>
-</section>
-
 <section class="sec" id="faq" style="border-top:1px solid var(--rule)">
   <div class="wrap">
     <div class="head center">
@@ -980,6 +1094,8 @@ html.has-cur,html.has-cur *{cursor:none!important}
       <h2>מה שכולם<span class="chr">שואלים לפני.</span></h2>
     </div>
     <div class="qa">
+      <details><summary>מה זה פרויקט 97 ולמי הוא מתאים?</summary><p>סדנה חיה בתל אביב לספרים צעירים, ב-97 שקל. מקצוע, עסק ושיווק ביום אחד, עם איליי ביתן ונועם דרעי. האירוע הבא ב-22.11.</p></details>
+      <details><summary>איך קונים כרטיס לפרויקט 97?</summary><p>בכפתור "קנה כרטיס" בסקשן של פרויקט 97. אפשר לשלם בביט או בכרטיס אשראי, והמיקום המדויק והשעה נשלחים אחרי הרכישה.</p></details>
       <details><summary>אני מתחיל מאפס. זה מתאים לי?</summary><p>כן. מסלול Foundations בנוי בדיוק בשבילך, ומתחילים בו מההבנה עצמה, עוד לפני הטכניקה.</p></details>
       <details><summary>אני כבר ספר. מה אני אלמד פה שעוד לא ראיתי?</summary><p>שיטת חשיבה. <span class="nw">ב-Picasso Legacy</span> אתה לומד לאבחן ולבנות כל תספורת מתוך עקרונות, בלי להסתמך על מספרי מסרק או על תספורות שראית ברשת.</p></details>
       <details><summary>כמה תלמידים יש בקבוצה?</summary><p>עד ארבעה, כדי שכל אחד יקבל תשומת לב אישית על הכיסא.</p></details>
@@ -1014,6 +1130,12 @@ html.has-cur,html.has-cur *{cursor:none!important}
   </div>
 </footer>
 
+<div class="p97-bar" id="p97Bar" aria-label="פרויקט 97">
+  <div class="p97-bar-in">
+    <p><b>פרויקט 97</b><span>22.11 · תל אביב · <em id="p97BarLeft">₪97</em></span></p>
+    <a class="btn" data-pay href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">כרטיס · ₪97</a>
+  </div>
+</div>
 <a class="fab" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20Picasso%20Academy" target="_blank" rel="noopener" aria-label="שלח הודעה בוואטסאפ"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1a15 15 0 0 1-1.5-.6 12 12 0 0 1-4.6-4c-.3-.5-.9-1.4-.9-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
 
 <script>
@@ -1484,6 +1606,59 @@ html.has-cur,html.has-cur *{cursor:none!important}
   W.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(frame);}},{passive:true});
   var rt;W.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){var nw=W.innerWidth,changed=nw!==vw;vw=nw;vh=W.innerHeight;for(var i=0;i<onResize.length;i++){try{onResize[i](changed);}catch(e){}}frame();},160);});
   frame();
+})();
+</script>
+<script>
+/* Project 97: countdown, ticket tilt, count-up, path fill, sticky bar */
+(function(){
+  var D=document,H=D.documentElement,W=window;
+  function $(s){return D.querySelector(s);}
+  var reduce=W.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var T=new Date('2026-11-22T00:00:00+02:00').getTime();
+  var cnt=$('#p97Count'),pill=$('#p97PillDays'),barLeft=$('#p97BarLeft');
+  function pad(n){return (n<10?'0':'')+n;}
+  function tick(){
+    var ms=T-Date.now();
+    if(ms<=0){if(cnt)cnt.hidden=true;if(pill)pill.textContent='היום';if(barLeft)barLeft.textContent='₪97';return false;}
+    var d=Math.floor(ms/864e5),h=Math.floor(ms/36e5)%24,m=Math.floor(ms/6e4)%60,s=Math.floor(ms/1e3)%60;
+    var v={d:pad(d),h:pad(h),m:pad(m),s:pad(s)};
+    if(cnt){Array.prototype.forEach.call(cnt.querySelectorAll('b'),function(b){var nv=v[b.getAttribute('data-u')];if(b.textContent!==nv){b.textContent=nv;if(!reduce){b.classList.remove('flip');void b.offsetWidth;b.classList.add('flip');}}});}
+    var left=d>1?'עוד '+d+' ימים':(d===1?'מחר':'היום');
+    if(pill)pill.textContent=left;if(barLeft)barLeft.textContent=left;
+    return true;
+  }
+  if(tick())setInterval(tick,1000);
+
+  var tk=$('#ticket');
+  if(tk&&!reduce&&W.matchMedia('(hover:hover)').matches){
+    tk.addEventListener('pointermove',function(e){var r=tk.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      tk.style.setProperty('--ry',((x-.5)*14).toFixed(2)+'deg');tk.style.setProperty('--rx',((.5-y)*12).toFixed(2)+'deg');
+      tk.style.setProperty('--mx',(x*100).toFixed(1)+'%');tk.style.setProperty('--my',(y*100).toFixed(1)+'%');tk.style.setProperty('--hx',(x*100).toFixed(1)+'%');});
+    tk.addEventListener('pointerleave',function(){['--rx','--ry'].forEach(function(k){tk.style.setProperty(k,'0deg');});});
+  }
+
+  var sec=$('#p97'),ghost=$('.p97-ghost'),path=$('#p97Path'),learn=$('.p97-learn'),num=$('[data-count]');
+  var ran=false;
+  if('IntersectionObserver' in W){
+    if(learn)new IntersectionObserver(function(es,o){es.forEach(function(e){if(e.isIntersecting){learn.classList.add('in');o.disconnect();}});},{rootMargin:'0px 0px -10% 0px'}).observe(learn);
+    if(num&&!reduce)new IntersectionObserver(function(es,o){es.forEach(function(e){if(!e.isIntersecting||ran)return;ran=true;o.disconnect();var t0=null,to=+num.getAttribute('data-count');
+      function f(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/1400),ease=1-Math.pow(1-k,4);num.textContent=Math.round(to*ease);if(k<1)requestAnimationFrame(f);}num.textContent='0';requestAnimationFrame(f);});},{threshold:.6}).observe(num);
+  }
+  var lis=path?path.querySelectorAll('li'):[];
+  var raf=0;
+  function onScroll(){raf=0;var vh=W.innerHeight;
+    if(sec&&ghost&&!reduce){var r=sec.getBoundingClientRect();if(r.bottom>0&&r.top<vh)ghost.style.setProperty('--py',(r.top*-.18).toFixed(1)+'px');}
+    if(path){var pr=path.getBoundingClientRect(),k=Math.max(0,Math.min(1,(vh*.7-pr.top)/pr.height));path.style.setProperty('--fill',reduce?1:k.toFixed(3));
+      Array.prototype.forEach.call(lis,function(li){var lr=li.getBoundingClientRect();li.classList.toggle('lit',reduce||lr.top<vh*.72);});}
+    bar();}
+  function req(){if(!raf)raf=requestAnimationFrame(onScroll);}
+  W.addEventListener('scroll',req,{passive:true});W.addEventListener('resize',req);
+
+  var B=$('#p97Bar'),hero=$('.hero'),side=$('.p97-side'),contact=$('#contact'),past=Date.now()>T;
+  function vis(el){if(!el)return false;var r=el.getBoundingClientRect();return r.bottom>0&&r.top<W.innerHeight;}
+  function bar(){if(!B||past)return;var show=hero&&hero.getBoundingClientRect().bottom<0&&!vis(side)&&!vis(contact)&&!vis(D.querySelector('.foot'));
+    B.classList.toggle('on',show);H.classList.toggle('bar-on',show);}
+  onScroll();
 })();
 </script>
 </body>
