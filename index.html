@@ -689,6 +689,38 @@ html.bar-on .fab{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
   html.fx .p97-learn.in li:nth-child(2){transition-delay:.12s}
   html.fx .p97-learn.in li:nth-child(3){transition-delay:.24s}
 }
+
+/* ===== kinetic typography =====
+   h2: words rise out of a blur, the chrome line zooms in letter by letter, then punches.
+   h3: words drop in with a bounce. English labels: letter spacing collapses.
+   leads: words surface in a quick wave. Rule line: words drop, the gold words stamp.
+   Latin line: each word slides in from an alternating side. */
+.kin .kw,.kin .kl{display:inline-block;will-change:transform,opacity,filter}
+.kin .k-rise{opacity:0;transform:translate3d(0,.55em,0);filter:blur(12px)}
+.kin .k-zoom{opacity:0;transform:scale(2.6);filter:blur(18px)}
+.kin .k-drop{opacity:0;transform:translate3d(0,-1em,0) rotate(-7deg)}
+.kin .k-side{opacity:0;transform:translate3d(calc(var(--s,1) * 1.4em),0,0);filter:blur(8px)}
+.kin .k-stamp{opacity:0;transform:scale(1.9);filter:blur(10px)}
+.kin .k-wave{opacity:0;transform:translate3d(0,.6em,0);filter:blur(4px)}
+.kin.go .kw,.kin.go .kl{opacity:1;transform:none;filter:none;transition:opacity .6s ease,transform 1s cubic-bezier(.16,1,.3,1),filter .8s ease;transition-delay:calc(var(--k,0) * 1ms)}
+.kin.go .k-drop{transition-timing-function:ease,cubic-bezier(.34,1.7,.6,1),ease;transition-duration:.45s,.85s,.5s}
+.kin.go .k-stamp{transition-timing-function:ease,cubic-bezier(.2,1.5,.4,1),ease;transition-duration:.35s,.7s,.5s}
+.kin.go .k-wave{transition-duration:.5s,.7s,.6s}
+.kin .chr,.kin em,.kin .gold{background:none;filter:none}
+.kin .chr .kw,.kin .chr .kl{background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kin em .kw,.kin .gold .kw,.kin .gold .kl{background:var(--goldgrad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpunch{animation:kpunch .6s cubic-bezier(.3,1.6,.5,1)}
+@keyframes kpunch{40%{transform:scale(1.06)}}
+h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
+.rule-line em.kpunch{display:inline-block}
+.kin-tag{opacity:0;letter-spacing:.75em;filter:blur(8px)}
+.kin-tag::after{transform:scaleX(0);transform-origin:right center}
+.kin-tag.go{opacity:1;letter-spacing:.04em;filter:none;transition:letter-spacing 1.5s cubic-bezier(.16,1,.3,1),opacity .8s ease,filter 1s ease}
+.kin-tag.go::after{transform:none;transition:transform 1.2s cubic-bezier(.16,1,.3,1) .35s}
+.latin-line.kin::before,.latin-line.kin::after{transition:transform 1.2s cubic-bezier(.16,1,.3,1) .5s}
+.latin-line.kin:not(.go)::before{transform:scaleX(0)}
+.latin-line.kin:not(.go)::after{transform:scaleX(0)}
+@media (prefers-reduced-motion:reduce){.kin .kw,.kin .kl,.kin-tag{opacity:1!important;transform:none!important;filter:none!important;letter-spacing:inherit}}
 </style>
 </head>
 <body>
@@ -1415,7 +1447,7 @@ html.bar-on .fab{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
   /* blocks rise in, photos and cards unfold */
   safe(function(){
     if(!fx)return;
-    var sets=[['.head .tag,.head .lead,.head .link,.about-text .tag,.cards4 .mini,.pillars > div,.prog-meta,.prog h3,.prog ul,.prog .who,.facts-row,.prog .link,.checks li,.why-text .pill,.why-text .btn,.qa details,.contact-logo,.contact .lead,.form-card,.contact .fine,.voices video,.grad .wrap > p,.latin-line,.rule-line,.film,.after-prog > .btn,.quiz,.blend,.stats dl > div','rv'],
+    var sets=[['.head .link,.cards4 .mini,.pillars > div,.prog-meta,.prog ul,.prog .who,.facts-row,.prog .link,.checks li,.why-text .pill,.why-text .btn,.qa details,.contact-logo,.form-card,.contact .fine,.voices video,.grad .wrap > p,.film,.after-prog > .btn,.quiz,.blend,.stats dl > div','rv'],
               ['.poster,.banner,.step,.why-photo,.wall > *,.cohorts img,.tones','rv-fold']];
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target,i=+el.style.getPropertyValue('--i')||0;
       el.classList.add('in');setTimeout(function(){el.classList.remove('rv','rv-fold','in');el.style.removeProperty('--i');},1500+i*110);});},{rootMargin:'0px 0px -8% 0px'});
@@ -1424,20 +1456,6 @@ html.bar-on .fab{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
       var idx=el.parentNode?Array.prototype.indexOf.call(el.parentNode.children,el):0;
       el.style.setProperty('--i',Math.min(idx,5));el.classList.add(s[1]);io.observe(el);
     });});
-  });
-
-  /* headings arrive as two halves of a cut */
-  safe(function(){
-    if(!fx)return;
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var h=e.target,r=h.getBoundingClientRect();
-      h.style.setProperty('--ang',(-Math.atan2(r.height*.2,r.width*1.12)*57.2958).toFixed(2)+'deg');
-      h.classList.add('cut');setTimeout(function(){h.classList.add('done');},1500);});},{rootMargin:'0px 0px -12% 0px'});
-    $$('main h2').forEach(function(h){
-      if(h.getBoundingClientRect().top<vh*.9)return;
-      var a=D.createElement('span');a.className='slc a';while(h.firstChild)a.appendChild(h.firstChild);
-      var b=a.cloneNode(true);b.className='slc b';b.setAttribute('aria-hidden','true');
-      h.appendChild(a);h.appendChild(b);h.classList.add('slice');io.observe(h);
-    });
   });
 
   /* the title guesses its letters, then understands them */
@@ -1667,6 +1685,62 @@ html.bar-on .fab{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
   function bar(){if(!B||past)return;var show=hero&&hero.getBoundingClientRect().bottom<0&&!vis(side)&&!vis(contact)&&!vis(D.querySelector('.foot'));
     B.classList.toggle('on',show);H.classList.toggle('bar-on',show);}
   onScroll();
+})();
+</script>
+<script>
+/* kinetic typography: every heading, label and lead line arrives with its own motion */
+(function(){
+  var W=window,D=document;
+  try{if(!('IntersectionObserver' in W)||(W.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches))return;}catch(e){return;}
+  var vh=W.innerHeight||800;
+  function $$(s,c){return Array.prototype.slice.call((c||D).querySelectorAll(s));}
+  function words(el){var out=[];(function walk(n){Array.prototype.slice.call(n.childNodes).forEach(function(c){
+      if(c.nodeType===3){if(!c.textContent.trim())return;var f=D.createDocumentFragment();
+        c.textContent.split(/(\s+)/).forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){f.appendChild(D.createTextNode(p));return;}
+          var w=D.createElement('span');w.className='kw';w.textContent=p;f.appendChild(w);out.push(w);});
+        n.replaceChild(f,c);}
+      else if(c.nodeType===1&&!/^(SVG|BR|IMG)$/i.test(c.tagName))walk(c);});})(el);return out;}
+  function letters(w){var t=w.textContent,out=[];w.textContent='';w.classList.remove('kw');w.classList.add('kwl');w.style.display='inline-block';
+    Array.from(t).forEach(function(ch){var l=D.createElement('span');l.className='kl';l.textContent=ch;w.appendChild(l);out.push(l);});return out;}
+  function inside(el,sel){return !!(el.closest&&el.closest(sel));}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target;
+      requestAnimationFrame(function(){el.classList.add('go');});
+      setTimeout(function(){if(el._orig!=null){el.innerHTML=el._orig;el._orig=null;}el.classList.remove('kin','go','kin-tag');
+        if(el._punch)$$(el._punch,el).forEach(function(p){p.classList.add('kpunch');setTimeout(function(){p.classList.remove('kpunch');},700);});},el._dur||1600);});},
+    {rootMargin:'0px 0px -10% 0px'});
+  function arm(el,build,punch){
+    if(!el||el.hidden||!el.offsetParent||el.getBoundingClientRect().top<vh*.9)return;
+    try{el._orig=el.innerHTML;if(!el.getAttribute('aria-label')&&/^H[1-6]$/.test(el.tagName))el.setAttribute('aria-label',el.textContent.replace(/\s+/g,' ').trim());
+      el._dur=build(el);el._punch=punch||null;el.classList.add('kin');io.observe(el);}
+    catch(err){if(el._orig!=null)el.innerHTML=el._orig;el._orig=null;}
+  }
+  function set(p,cls,k){p.classList.add(cls);p.style.setProperty('--k',Math.round(k));}
+
+  /* h2: plain words rise from a blur, the chrome/gold line zooms in letter by letter */
+  $$('main h2').forEach(function(h){arm(h,function(){
+    var ws=words(h),t=0,end=0;
+    ws.forEach(function(w){
+      if(inside(w,'.chr,.gold')){letters(w).forEach(function(l){set(l,'k-zoom',t);t+=38;});t+=60;}
+      else{set(w,'k-rise',t);t+=110;}
+      end=t;});
+    return end+1150;},'.chr,.gold');});
+
+  /* h3: words drop in with a bounce */
+  $$('main h3').forEach(function(h){arm(h,function(){var t=0;words(h).forEach(function(w){set(w,'k-drop',t);t+=120;});return t+1000;});});
+
+  /* English labels: the letter spacing collapses into place */
+  $$('main .tag').forEach(function(el){if(el.offsetParent&&el.getBoundingClientRect().top>=vh*.9){el.classList.add('kin-tag');el._dur=1700;io.observe(el);}});
+
+  /* leads: a quick wave of words */
+  $$('main .lead').forEach(function(p){arm(p,function(){var ws=words(p),step=Math.max(10,Math.min(28,900/ws.length)),t=0;
+    ws.forEach(function(w){set(w,'k-wave',t);t+=step;});return t+900;});});
+
+  /* the rule line: words drop, the gold words stamp in last and punch */
+  $$('main .rule-line').forEach(function(p){arm(p,function(){var t=0,g=[];words(p).forEach(function(w){if(inside(w,'em'))g.push(w);else{set(w,'k-drop',t);t+=110;}});
+    t+=150;g.forEach(function(w){set(w,'k-stamp',t);t+=140;});return t+900;},'em');});
+
+  /* Understand. Build. Connect. — each word slides in from an alternating side */
+  $$('main .latin-line').forEach(function(p){arm(p,function(){var t=0;words(p).forEach(function(w,i){set(w,'k-side',t);w.style.setProperty('--s',i%2?-1:1);t+=260;});return t+1300;});});
 })();
 </script>
 </body>
