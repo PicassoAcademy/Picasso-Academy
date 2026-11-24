@@ -598,6 +598,14 @@ html.has-cur,html.has-cur *{cursor:none!important}
 @keyframes flip{0%{transform:rotateX(-80deg);opacity:.2}100%{transform:none;opacity:1}}
 .p97-count small{font-size:12px;letter-spacing:.2em;color:var(--ash)}
 .p97-grid{display:grid;gap:56px}
+.p97-recap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.p97-recap figure{display:flex;flex-direction:column;gap:10px;margin:0;min-width:0}
+.p97-recap video{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:14px;border:1px solid rgba(214,177,106,.35);background:var(--card)}
+.p97-recap figcaption{font-size:14px;letter-spacing:.06em;color:var(--ash);text-align:center}
+.p97-says{list-style:none;padding:0;display:grid;gap:10px}
+.p97-says li{padding:16px 18px;border-inline-start:2px solid var(--gold);background:rgba(214,177,106,.06);border-radius:10px 0 0 10px;font-size:clamp(18px,3.6vw,20px);line-height:1.5}
+.p97-months li.done{border-style:solid;border-color:rgba(214,177,106,.3);color:var(--bone)}
+.p97-months li.done b{color:var(--gold)}
 .p97-main{display:flex;flex-direction:column;gap:64px;min-width:0}
 .p97-block{display:flex;flex-direction:column;gap:18px;min-width:0}
 .p97-block h3{font-family:var(--heb);font-weight:700;font-size:clamp(38px,8vw,54px);line-height:1;color:var(--bone);text-wrap:balance}
@@ -770,13 +778,13 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
       </div>
     </div>
     <div class="hero-copy">
-      <div class="pills"><a class="p97-pill" href="#p97"><i aria-hidden="true"></i><span>פרויקט 97 · 22.11 · תל אביב</span><b id="p97PillDays">₪97</b></a><a class="p97-pill acad" href="#programs"><i aria-hidden="true"></i><span>מסלולי האקדמיה</span><b>עד 12 תשלומים</b></a></div>
+      <div class="pills"><a class="p97-pill" href="#p97"><i aria-hidden="true"></i><span>פרויקט 97 · הבא בדצמבר</span><b id="p97PillDays">₪97</b></a><a class="p97-pill acad" href="#programs"><i aria-hidden="true"></i><span>מסלולי האקדמיה</span><b>עד 12 תשלומים</b></a></div>
       <h1><span>תפסיק לנחש.</span><span class="chr">תתחיל להבין.</span></h1>
       <p class="academy-line" lang="en">Men's Barbering Academy</p>
       <p class="lead">מלמד ספרים להבין, לא להעתיק. מאפס לספר, או מספר לסמכות.</p>
       <div class="hero-actions">
         <a class="btn" href="#contact">קבע שיחת אפיון <span class="ar">←</span></a>
-        <a class="btn gold" href="#p97">פרויקט 97 · 22.11</a>
+        <a class="btn gold" href="#p97">פרויקט 97 · הבא בדצמבר</a>
       </div>
     </div>
   </div>
@@ -933,7 +941,7 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
     <p class="tag" lang="en">Education Day</p>
     <h2>יום השתלמות.<span class="chr">ותעודה ביד.</span></h2>
     <p>ככה נראה יום השתלמות של Picasso Academy בנושא תספורות ופיידים: עשרות משתתפים, וכל אחד יוצא עם תעודה.</p>
-    <a class="link" href="#p97">האירוע הבא: פרויקט 97, 22.11 <span>←</span></a>
+    <a class="link" href="#p97">ככה היה בפרויקט 97, והאירוע הבא <span>←</span></a>
     <div class="cohorts">
       <img src="media/cohort-group.jpg" width="788" height="1400" alt="מחזור של Picasso Academy עם התעודות" loading="lazy">
       <img src="media/cohort-small.jpg" width="1050" height="1400" alt="בוגר מחזיק תעודה עם הצוות" loading="lazy">
@@ -946,18 +954,18 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
   <span class="p97-ghost" aria-hidden="true">97</span>
   <div class="wrap">
     <div class="p97-intro">
-      <p class="tag" lang="en">Project 97 · Monthly Live Event</p>
+      <p class="tag" lang="en">Project 97 · Monthly Live Event · Next: December</p>
       <h2 id="p97Title">פרויקט 97.<span class="gold">יום אחד שמשנה כיוון.</span></h2>
-      <p class="lead">סדנה חיה בתל אביב לספרים צעירים, במחיר שכל אחד יכול לעמוד בו. מקצוע, עסק ושיווק, עם איליי ביתן ונועם דרעי, ביום אחד.</p>
-      <div class="p97-count" id="p97Count" role="timer" aria-label="הזמן שנותר עד האירוע ב-22.11">
+      <p class="lead">סדנה חיה בתל אביב לספרים צעירים, במחיר שכל אחד יכול לעמוד בו. מקצוע, עסק ושיווק, עם איליי ביתן ונועם דרעי, ביום אחד. האירוע של 22.11 מאחורינו, והבא כבר בדרך.</p>
+      <div class="p97-count" id="p97Count" role="timer" aria-label="הזמן שנותר עד האירוע הבא" hidden>
         <div><b data-u="d">--</b><small>ימים</small></div>
         <div><b data-u="h">--</b><small>שעות</small></div>
         <div><b data-u="m">--</b><small>דקות</small></div>
         <div><b data-u="s">--</b><small>שניות</small></div>
       </div>
       <div class="p97-facts">
-        <div><small>תאריך</small><b>22.11</b></div>
-        <div><small>יום</small><b>ראשון</b></div>
+        <div><small>האירוע הבא</small><b>דצמבר</b></div>
+        <div><small>תאריך</small><b>יפורסם</b></div>
         <div><small>מיקום</small><b>תל אביב</b></div>
         <div><small>כרטיס</small><b class="num">₪<span data-count="97">97</span></b></div>
       </div>
@@ -965,6 +973,20 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
 
     <div class="p97-grid">
       <div class="p97-main">
+
+        <div class="p97-block">
+          <h3>ככה זה נראה ב־22.11</h3>
+          <p class="p97-sub">לא צריך להאמין לנו. תשמעו מהספרים שהיו שם.</p>
+          <div class="p97-recap">
+            <figure><video controls playsinline preload="metadata" poster="media/p97-recap.jpg" src="media/p97-recap.mp4" aria-label="משתתפי פרויקט 97 מספרים על האירוע" data-cursor="PLAY"></video><figcaption>משתתפים מספרים</figcaption></figure>
+            <figure><video controls playsinline preload="metadata" poster="media/p97-vibe.jpg" src="media/p97-vibe.mp4" aria-label="האווירה באירוע פרויקט 97" data-cursor="PLAY"></video><figcaption>האווירה באירוע</figcaption></figure>
+          </div>
+          <ul class="p97-says" aria-label="מה אמרו משתתפים">
+            <li>"שני אומנים מטורפים, נועם דרעי ואיליי ביתן, עושים פה אירוע של החיים."</li>
+            <li>"המחיר זה כמו חינם ביחס לידע."</li>
+            <li>"הכי משתלם בארץ, חברים. ממליץ ב־100 אחוז."</li>
+          </ul>
+        </div>
 
         <div class="p97-block">
           <h3>מה לוקחים מהיום הזה</h3>
@@ -986,8 +1008,8 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
           <h3>זה לא אירוע חד־פעמי</h3>
           <p class="p97-sub">פרויקט 97 הוא סדרה קבועה. אירוע לפחות פעם בחודש, כדי שלכל ספר צעיר תהיה תמיד הזדמנות קרובה ללמוד, לשאול ולהתקדם.</p>
           <ol class="p97-months" aria-label="אירועי פרויקט 97 הקרובים">
-            <li class="now"><small>נובמבר</small><b>22.11</b><em>האירוע הגדול ביותר שעשינו עד היום</em></li>
-            <li><small>דצמבר</small><b>בקרוב</b><em>התאריך יפורסם</em></li>
+            <li class="now"><small>דצמבר</small><b>הבא בתור</b><em>התאריך יפורסם בקרוב. שמרו מקום מראש</em></li>
+            <li class="done"><small>נובמבר</small><b>22.11</b><em>האירוע הגדול ביותר שעשינו עד היום</em></li>
             <li><small>ינואר</small><b>בקרוב</b><em>התאריך יפורסם</em></li>
           </ol>
         </div>
@@ -1003,29 +1025,29 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
         </div>
       </div>
 
-      <aside class="p97-side" aria-label="רכישת כרטיס">
+      <aside class="p97-side" aria-label="שמירת מקום לאירוע הבא">
         <div class="ticket-wrap">
           <div class="ticket" id="ticket">
             <div class="t-main">
               <div class="t-top"><span lang="en">PICASSO ACADEMY</span><span lang="en">ADMIT ONE</span></div>
               <p class="t-name"><span>פרויקט</span><b lang="en">97</b></p>
               <dl class="t-meta">
-                <div><dt>תאריך</dt><dd>22.11.26</dd></div>
+                <div><dt>מועד</dt><dd>דצמבר</dd></div>
                 <div><dt>עיר</dt><dd>תל אביב</dd></div>
                 <div><dt>מחיר</dt><dd>₪97</dd></div>
               </dl>
               <!-- P97_PAY_LINK: replace both hrefs marked data-pay with the payment-page link (Bit + credit card) -->
-              <a class="btn" id="p97Pay" data-pay href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">קנה כרטיס · ₪97 <span class="ar">←</span></a>
+              <a class="btn" id="p97Pay" data-pay href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%94%D7%91%D7%90" target="_blank" rel="noopener">שמור לי מקום · ₪97 <span class="ar">←</span></a>
               <p class="t-pay"><span>ביט</span><span>כרטיס אשראי</span></p>
             </div>
             <div class="t-stub" aria-hidden="true">
               <span class="t-bars"></span>
-              <span class="t-no" lang="en">P-97 · 22.11</span>
+              <span class="t-no" lang="en">P-97 · DEC</span>
             </div>
           </div>
         </div>
-        <a class="btn gold" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">שאלה על האירוע? וואטסאפ</a>
-        <p class="fine">מקומות מוגבלים, כ-120 משתתפים. המיקום המדויק והשעה יישלחו לכל מי שרכש כרטיס.</p>
+        <a class="btn gold" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%94%D7%91%D7%90" target="_blank" rel="noopener">שאלה על האירוע? וואטסאפ</a>
+        <p class="fine">מקומות מוגבלים, כ-120 משתתפים. מי ששומר מקום מקבל ראשון את התאריך, המיקום והקישור לתשלום.</p>
       </aside>
     </div>
   </div>
@@ -1143,7 +1165,7 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
       <h2>מה שכולם<span class="chr">שואלים לפני.</span></h2>
     </div>
     <div class="qa">
-      <details><summary>מה זה פרויקט 97 ולמי הוא מתאים?</summary><p>סדנה חיה בתל אביב לספרים צעירים, ב-97 שקל. מקצוע, עסק ושיווק ביום אחד, עם איליי ביתן ונועם דרעי. האירוע הבא ב-22.11.</p></details>
+      <details><summary>מה זה פרויקט 97 ולמי הוא מתאים?</summary><p>סדנה חיה בתל אביב לספרים צעירים, ב-97 שקל. מקצוע, עסק ושיווק ביום אחד, עם איליי ביתן ונועם דרעי. האירוע האחרון היה ב-22.11, והבא יתקיים בדצמבר.</p></details>
       <details><summary>איך קונים כרטיס לפרויקט 97?</summary><p>בכפתור "קנה כרטיס" בסקשן של פרויקט 97. אפשר לשלם בביט או בכרטיס אשראי, והמיקום המדויק והשעה נשלחים אחרי הרכישה.</p></details>
       <details><summary>אני מתחיל מאפס. זה מתאים לי?</summary><p>כן. מסלול Foundations בנוי בדיוק בשבילך, ומתחילים בו מההבנה עצמה, עוד לפני הטכניקה.</p></details>
       <details><summary>אני כבר ספר. מה אני אלמד פה שעוד לא ראיתי?</summary><p>שיטת חשיבה. <span class="nw">ב-Picasso Legacy</span> אתה לומד לאבחן ולבנות כל תספורת מתוך עקרונות, בלי להסתמך על מספרי מסרק או על תספורות שראית ברשת.</p></details>
@@ -1181,8 +1203,8 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
 
 <div class="p97-bar" id="p97Bar" aria-label="פרויקט 97">
   <div class="p97-bar-in">
-    <p><b>פרויקט 97</b><span>22.11 · תל אביב · <em id="p97BarLeft">₪97</em></span></p>
-    <a class="btn" data-pay href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9B%D7%A8%D7%98%D7%99%D7%A1%20%D7%9C%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%91-22.11" target="_blank" rel="noopener">כרטיס · ₪97</a>
+    <p><b>פרויקט 97</b><span>הבא בדצמבר · תל אביב · <em id="p97BarLeft">₪97</em></span></p>
+    <a class="btn" data-pay href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9E%D7%A7%D7%95%D7%9D%20%D7%91%D7%A4%D7%A8%D7%95%D7%99%D7%A7%D7%98%2097%20%D7%94%D7%91%D7%90" target="_blank" rel="noopener">שמור מקום · ₪97</a>
   </div>
 </div>
 <a class="fab" href="https://wa.me/972542094188?text=%D7%94%D7%99%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%A8%D7%95%D7%A6%D7%94%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20Picasso%20Academy" target="_blank" rel="noopener" aria-label="שלח הודעה בוואטסאפ"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1a15 15 0 0 1-1.5-.6 12 12 0 0 1-4.6-4c-.3-.5-.9-1.4-.9-2.6s.6-1.9.9-2.1c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.2 1.6 1.9 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
@@ -1672,10 +1694,12 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
   var D=document,H=D.documentElement,W=window;
   function $(s){return D.querySelector(s);}
   var reduce=W.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var T=new Date('2026-11-22T00:00:00+02:00').getTime();
+  /* Next event date. Set it when it is fixed, e.g. new Date('2026-12-20T00:00:00+02:00').getTime(); null keeps the countdown hidden. */
+  var T=null;
   var cnt=$('#p97Count'),pill=$('#p97PillDays'),barLeft=$('#p97BarLeft');
   function pad(n){return (n<10?'0':'')+n;}
   function tick(){
+    if(!T)return false;if(cnt)cnt.hidden=false;
     var ms=T-Date.now();
     if(ms<=0){if(cnt)cnt.hidden=true;if(pill)pill.textContent='היום';if(barLeft)barLeft.textContent='₪97';return false;}
     var d=Math.floor(ms/864e5),h=Math.floor(ms/36e5)%24,m=Math.floor(ms/6e4)%60,s=Math.floor(ms/1e3)%60;
@@ -1712,7 +1736,7 @@ h2 .chr.kpunch,.p97 h2 .gold.kpunch{transform-origin:right center}
   function req(){if(!raf)raf=requestAnimationFrame(onScroll);}
   W.addEventListener('scroll',req,{passive:true});W.addEventListener('resize',req);
 
-  var B=$('#p97Bar'),hero=$('.hero'),side=$('.p97-side'),contact=$('#contact'),past=Date.now()>T;
+  var B=$('#p97Bar'),hero=$('.hero'),side=$('.p97-side'),contact=$('#contact'),past=!!T&&Date.now()>T;
   function vis(el){if(!el)return false;var r=el.getBoundingClientRect();return r.bottom>0&&r.top<W.innerHeight;}
   function bar(){if(!B||past)return;var show=hero&&hero.getBoundingClientRect().bottom<0&&!vis(side)&&!vis(contact)&&!vis(D.querySelector('.foot'));
     B.classList.toggle('on',show);H.classList.toggle('bar-on',show);}
